@@ -1,7 +1,7 @@
 <template>
   <nav></nav>
-  <main>
-    <h1>hi</h1>
+  <main flex="~ justify-center items-center">
+    <RouterView />
     <TheCanvas />
   </main>
   <footer></footer>

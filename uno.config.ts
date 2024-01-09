@@ -16,7 +16,7 @@ export default defineConfig({
       "text-xl tracking-wide uppercase p3 border-b-2 border-transparent op20 transition",
     ],
     ["bg-base", "bg-gray/5"],
-    ["font-base", "text-gray/100"],
+    ["font-base", "text-gray/200"],
     ["n-tab-active", "border-current op100"],
     ["border-base", "border-gray-400/20"],
   ],
