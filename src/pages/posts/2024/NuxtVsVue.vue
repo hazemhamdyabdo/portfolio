@@ -17,9 +17,9 @@ import PostLayout from "@/layout/PostLayout.vue";
       based on your project requirements.
     </p>
     <h3 third-head>Why we Should use Vue?</h3>
-    <ul>
+    <ol>
       <li>
-        <h4 sub-head>1. Lightweight and Versatile.</h4>
+        <h4 sub-head>Lightweight and Versatile.</h4>
         <p text-base>
           Vue.js is a progressive JavaScript framework that is renowned for its
           simplicity and ease of integration. It provides a flexible
@@ -29,7 +29,7 @@ import PostLayout from "@/layout/PostLayout.vue";
         </p>
       </li>
       <li>
-        <h4 sub-head>2. Flexibility and Scalability.</h4>
+        <h4 sub-head>Flexibility and Scalability.</h4>
         <p text-base>
           Vue.js provides developers with the freedom to structure their
           application as they see fit. This flexibility makes it easy to scale
@@ -40,7 +40,7 @@ import PostLayout from "@/layout/PostLayout.vue";
         </p>
       </li>
       <li>
-        <h4 sub-head>3. Detailed Documentation and Large Community.</h4>
+        <h4 sub-head>Detailed Documentation and Large Community.</h4>
         <p text-base>
           Vue.js boasts comprehensive and well-organized documentation, making
           it accessible for both beginners and experienced developers.
@@ -49,11 +49,11 @@ import PostLayout from "@/layout/PostLayout.vue";
           find solutions to common issues and stay updated on best practices.
         </p>
       </li>
-    </ul>
+    </ol>
     <h3 third-head>Why we Should use Nuxt?</h3>
-    <ul>
+    <ol>
       <li>
-        <h4 sub-head>1. Convention over Configuration.</h4>
+        <h4 sub-head>Convention over Configuration.</h4>
         <p text-base>
           Nuxt.js, built on top of Vue.js, follows the convention over
           configuration principle. It enforces a set of conventions to
@@ -65,7 +65,7 @@ import PostLayout from "@/layout/PostLayout.vue";
       </li>
       <li>
         <h4 sub-head>
-          2. Server-Side Rendering (SSR) and Universal Applications.
+          Server-Side Rendering (SSR) and Universal Applications.
         </h4>
         <p text-base>
           One of Nuxt.js's standout features is its built-in support for
@@ -76,7 +76,7 @@ import PostLayout from "@/layout/PostLayout.vue";
         </p>
       </li>
       <li>
-        <h4 sub-head>3. Out-of-the-Box Features.</h4>
+        <h4 sub-head>Out-of-the-Box Features.</h4>
         <p text-base>
           Nuxt.js comes with many features out of the box, such as routing,
           transitions, and state management. This pre-configuration accelerates
@@ -85,11 +85,11 @@ import PostLayout from "@/layout/PostLayout.vue";
           with middleware and plugins.
         </p>
       </li>
-    </ul>
+    </ol>
     <h3 third-head>Choosing Between Vue.js and Nuxt.js</h3>
-    <ul>
+    <ol>
       <li>
-        <h4 sub-head>1. Project Complexity.</h4>
+        <h4 sub-head>Project Complexity.</h4>
         <p text-base>
           Use Vue.js if your SPA is relatively straightforward and you prefer a
           minimalistic approach. Opt for Nuxt.js when building complex
@@ -98,7 +98,7 @@ import PostLayout from "@/layout/PostLayout.vue";
         </p>
       </li>
       <li>
-        <h4 sub-head>2. Performance and SEO.</h4>
+        <h4 sub-head>Performance and SEO.</h4>
         <p text-base>
           For SPAs where SEO and initial page load time are critical, consider
           Nuxt.js with its SSR capabilities. If performance is less of a concern
@@ -107,14 +107,14 @@ import PostLayout from "@/layout/PostLayout.vue";
         </p>
       </li>
       <li>
-        <h4 sub-head>3. Development Preferences.</h4>
+        <h4 sub-head>Development Preferences.</h4>
         <p text-base>
           Choose Vue.js if you prefer a more manual and customized configuration
           approach. Select Nuxt.js if you appreciate a convention-driven setup
           and want to expedite development through built-in features.
         </p>
       </li>
-    </ul>
+    </ol>
     <h3 third-head>Conclusion</h3>
     <p text-lg>
       In conclusion, both Vue.js and Nuxt.js are powerful frameworks, each

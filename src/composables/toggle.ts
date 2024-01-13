@@ -3,7 +3,6 @@ import { nextTick, computed } from "vue";
 
 const mode = useColorMode();
 export const isDark = computed(() => (mode.value === "dark" ? true : false));
-
 export function toggleDark(event: MouseEvent) {
   // prettier-ignore
   // @ts-expect-error experimental API
@@ -45,5 +44,3 @@ export function toggleDark(event: MouseEvent) {
     );
   });
 }
-
-console.log(isDark.value);

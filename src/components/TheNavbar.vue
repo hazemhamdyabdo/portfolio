@@ -16,11 +16,11 @@ import { toggleDark, isDark } from "@/composables/toggle.ts";
     </RouterLink>
     <ul text-white flex="~ row " gap-5>
       <RouterLink :to="{ name: 'blogs' }">Blog</RouterLink>
-      <RouterLink to="/">Projects</RouterLink>
-      <RouterLink to="/">Demos</RouterLink>
+      <RouterLink :to="{ name: 'projects' }">Projects</RouterLink>
+      <RouterLink :to="{ name: 'demos' }">Demos</RouterLink>
       <RouterLink to="/">Contacts</RouterLink>
       <a
-        href="https://www.dropbox.com/scl/fi/c0xnebs6su062risyd2o8/hazem_hamdy_resume.pdf?rlkey=92y0mswhygps96tj7p0vm9mfx&dl=0"
+        href="https://www.dropbox.com/scl/fi/hfratnk3l0zp3gsuamqw7/hazem_hamdy_resume.pdf?rlkey=k00ba91g7hlfrmrzw5u4posic&dl=0"
         target="_blank"
         >Reusme</a
       >

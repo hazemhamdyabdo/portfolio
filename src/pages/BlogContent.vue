@@ -1,10 +1,10 @@
 <script setup lang="ts">
-import LastVersionOfVue from "./posts/2023/LastVersionOfVue.vue";
-import NuxtVsVue from "./posts/2024/NuxtVsVue.vue";
-import CompositionApiInVue from "./posts/2023/CompositionApiInVue.vue";
-import ComposableVsMixins from "./posts/2023/ComposableVsMixins.vue";
-import CommonVueMistakes from "./posts/2023/CommonVueMistakes.vue";
-import Vue3MigrationNotes from "./posts/2023/Vue3MigrationNotes.vue";
+import LastVersionOfVue from "@/pages/posts/2023/LastVersionOfVue.vue";
+import NuxtVsVue from "@/pages/posts/2024/NuxtVsVue.vue";
+import CompositionApiInVue from "@/pages/posts/2023/CompositionApiInVue.vue";
+import ComposableVsMixins from "@/pages/posts/2023/ComposableVsMixins.vue";
+import CommonVueMistakes from "@/pages/posts/2023/CommonVueMistakes.vue";
+import Vue3MigrationNotes from "@/pages/posts/2023/Vue3MigrationNotes.vue";
 import { computed } from "vue";
 import { useRoute } from "vue-router";
 import ChervenRight from "@/components/icons/ChervenRight.vue";

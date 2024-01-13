@@ -9,13 +9,13 @@
         <component :is="Component"></component>
       </Transition>
     </RouterView>
-    <TheCanvas />
+    <Plum />
   </main>
   <footer></footer>
 </template>
 
 <script setup lang="ts">
-import TheCanvas from "./components/TheCanvas.vue";
+import Plum from "@/interactivity/Plum.vue";
 import TheNavbar from "./components/TheNavbar.vue";
 </script>
 

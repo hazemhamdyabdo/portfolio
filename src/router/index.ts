@@ -14,6 +14,16 @@ const routes = [
     component: () => import("../pages/BlogContent.vue"),
     props: true,
   },
+  {
+    path: "/projects",
+    name: "projects",
+    component: () => import("../pages/Projects.vue"),
+  },
+  {
+    path: "/demos",
+    name: "demos",
+    component: () => import("../pages/Demos.vue"),
+  },
 ];
 
 export const Router = createRouter({

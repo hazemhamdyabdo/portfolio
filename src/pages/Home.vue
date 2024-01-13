@@ -6,15 +6,16 @@ import CountDown from "../components/CountDown.vue";
   <div class="continer text-center">
     <h1 text-black text-4xl font-700 dark:text-white>Hazem Hamdy</h1>
     <p font-base>
-      Hey, I am Hazem Hamdy, With years of hands-on experience as a Front-End
-      Web Developer, I bring expertise in Vue.js and its associated technologies
-      to craft visually appealing and dynamic user interfaces.
+      Hey, I am <strong font-900> Hazem Hamdy</strong>, With years of hands-on
+      experience as a Front-End Web Developer, I bring expertise in
+      <strong font-900> Vue.js</strong> and its associated technologies to craft
+      visually appealing and dynamic user interfaces.
     </p>
     <CountDown />
     <p font-base>
       Working at
       <a href="https://payiano.com/" target="_blank" text-black dark:text-white
-        >Payaino</a
+        >Payiano</a
       >. it is a digital payments platform that helps merchants, corporates, and
       individuals make transactions quickly and securely.<br />
       Worked at
@@ -29,7 +30,7 @@ import CountDown from "../components/CountDown.vue";
     <p font-base>
       Dreaming up ideas and making them come true is where my passion lies. You
       can find my
-      <RouterLink to="/" text-black dark:text-white>
+      <RouterLink :to="{ name: 'projects' }" text-black dark:text-white>
         full projects list here</RouterLink
       >.
     </p>
