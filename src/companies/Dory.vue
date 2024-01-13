@@ -1,6 +1,4 @@
-<script setup lang="ts">
-import Arrow from "@/components/Arrow.vue";
-</script>
+<script setup lang="ts"></script>
 
 <template>
   <div class="img" relative mb-30>
@@ -42,8 +40,6 @@ import Arrow from "@/components/Arrow.vue";
       </ul>
     </div>
   </div>
-
-  <Arrow />
 </template>
 
 <style scoped lang="scss">
