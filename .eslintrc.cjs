@@ -21,5 +21,13 @@ module.exports = {
     sourceType: "module",
   },
   plugins: ["@typescript-eslint", "vue"],
-  rules: {},
+  rules: {
+    "vue/no-unused-vars": null,
+    "vue/multi-word-component-names": [
+      "error",
+      {
+        ignores: [],
+      },
+    ],
+  },
 };

@@ -1,7 +1,14 @@
 <template>
-  <nav></nav>
+  <nav>
+    <TheNavbar />
+  </nav>
   <main flex="~ justify-center items-center">
-    <RouterView />
+    <!-- <component></component> -->
+    <RouterView v-slot="{ Component }">
+      <Transition name="fade" mode="out-in">
+        <component :is="Component"></component>
+      </Transition>
+    </RouterView>
     <TheCanvas />
   </main>
   <footer></footer>
@@ -9,11 +16,17 @@
 
 <script setup lang="ts">
 import TheCanvas from "./components/TheCanvas.vue";
+import TheNavbar from "./components/TheNavbar.vue";
 </script>
 
 <style>
-body {
-  background-color: black;
-  overflow-x: hidden;
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.2s ease;
+}
+
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
 }
 </style>

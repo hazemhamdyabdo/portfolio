@@ -1,6 +1,7 @@
 import { defineConfig } from "vite";
 import UnoCSS from "unocss/vite";
 import Unimport from "unimport/unplugin";
+import { fileURLToPath, URL } from "url";
 
 import vue from "@vitejs/plugin-vue";
 
@@ -17,4 +18,9 @@ export default defineConfig({
       dirs: ["./components/*"],
     }),
   ],
+  resolve: {
+    alias: {
+      "@": fileURLToPath(new URL("./src", import.meta.url)),
+    },
+  },
 });
