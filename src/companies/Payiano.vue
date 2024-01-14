@@ -31,11 +31,6 @@
           by 20% and production by 8%.
         </li>
         <li>
-          Employed Vue Router to establish protected routes for login pages and
-          admin dashboards, resulting in enhanced user access control and
-          strengthening overall system security.
-        </li>
-        <li>
           Refactor and restructured Pinia store, optimizing application’s state
           management; reduced load time by 25% and enhanced overall performance
         </li>
@@ -53,7 +48,7 @@
 .img {
   max-height: max-content;
   & img {
-    height: 32rem;
+    height: 27rem;
     width: 120rem;
   }
 }

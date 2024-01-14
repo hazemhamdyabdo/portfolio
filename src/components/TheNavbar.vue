@@ -18,7 +18,6 @@ import { toggleDark, isDark } from "@/composables/toggle.ts";
       <RouterLink :to="{ name: 'blogs' }">Blog</RouterLink>
       <RouterLink :to="{ name: 'projects' }">Projects</RouterLink>
       <RouterLink :to="{ name: 'demos' }">Demos</RouterLink>
-      <RouterLink to="/">Contacts</RouterLink>
       <a
         href="https://www.dropbox.com/scl/fi/hfratnk3l0zp3gsuamqw7/hazem_hamdy_resume.pdf?rlkey=k00ba91g7hlfrmrzw5u4posic&dl=0"
         target="_blank"
