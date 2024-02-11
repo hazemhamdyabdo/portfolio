@@ -45,8 +45,8 @@
 <style scoped lang="scss">
 .img {
   & img {
-    width: 100rem;
-    height: 20rem;
+    width: 1750px;
+    height: 320px;
   }
   .two,
   .three,

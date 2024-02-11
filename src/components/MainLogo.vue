@@ -14,6 +14,7 @@
     invert-95
     dark:invert-0
     important-m0
+    class="logo-path"
   >
     <g>
       <g>
@@ -102,7 +103,71 @@
   </svg>
 </template>
 
-<style scoped>
+<style lang="scss" scoped>
+.logo-path {
+  stroke-dasharray: 3000;
+  stroke-dashoffset: 4200;
+  animation: dash 5s linear forwards infinite;
+}
+
+@keyframes dash {
+  0% {
+    stroke-dashoffset: 4200;
+  }
+  90% {
+    fill: transparent;
+    stroke-dashoffset: 0;
+  }
+
+  100% {
+    fill: #fff;
+    stroke-dashoffset: 0;
+  }
+}
+/*
+body {
+  background: #000;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.logo-path {
+  path {
+    stroke: #fff;
+    stroke-width: 0;
+    stroke-dasharray: 500;
+  }
+  path {
+    animation: letter-animation 8s linear forwards infinite;
+  }
+}
+
+@keyframes letter-animation {
+  0% {
+    stroke-dashoffset: 500;
+    stroke-width: 0.8;
+    fill-opacity: 0;
+    fill: #fff;
+  }
+  25% {
+    fill-opacity: 0.2;
+  }
+  50% {
+    fill-opacity: 0.5;
+  }
+  75% {
+    fill-opacity: 0.8;
+  }
+  100% {
+    fill-opacity: 1;
+    stroke-width: 0;
+    stroke-dashoffset: 0;
+    fill: #fff;
+  }
+}
+*/
+/*
 @media (prefers-reduced-motion) {
   path {
     animation: none !important;
@@ -121,7 +186,6 @@
   40% {
     stroke-dasharray: 350px 0;
   }
-  /* Moving back */
   85% {
     stroke-dasharray: 350px 0;
   }
@@ -138,4 +202,5 @@ path {
   stroke: #303030;
   animation-delay: 0s;
 }
+*/
 </style>

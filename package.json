@@ -9,8 +9,11 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@lottiefiles/vue-lottie-player": "^1.1.0",
     "@vueuse/core": "^10.7.1",
     "eslint-plugin-unused-imports": "^3.0.0",
+    "lottie-vuejs": "^0.1.9",
+    "lottie-web": "^5.12.2",
     "markdown-it": "^14.0.0",
     "nprogress": "^0.2.0",
     "unimport": "^3.7.1",

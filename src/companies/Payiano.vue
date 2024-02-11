@@ -1,5 +1,3 @@
-<script setup lang="ts"></script>
-
 <template>
   <div class="img">
     <img src="@/assets/payiano.png" alt="Payaino Landing-page" />

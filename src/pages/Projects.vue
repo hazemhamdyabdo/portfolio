@@ -1,12 +1,24 @@
 <script setup lang="ts">
 import Payaino from "@/companies/Payiano.vue";
 import Dory from "@/companies/Dory.vue";
+import Sable from "@/companies/Sable.vue";
+import DownLeftArrow from "@/components/DownLeftArrow.vue";
+import DownRightArrow from "@/components/DownRightArrow.vue";
 </script>
 
 <template>
-  <section class="sec">
-    <div class="continer">
-      <Payaino />
+  <section class="sec slide-enter">
+    <div>
+      <div class="continer">
+        <Payaino />
+      </div>
+      <DownLeftArrow />
+    </div>
+    <div>
+      <div class="center">
+        <Sable />
+      </div>
+      <DownRightArrow />
     </div>
     <div class="center">
       <Dory />
@@ -18,7 +30,7 @@ import Dory from "@/companies/Dory.vue";
 .sec {
   display: grid;
   place-items: center;
-  gap: 15rem;
+  gap: 1rem;
 }
 html.dark {
   .continer {
@@ -35,8 +47,9 @@ html {
   display: flex;
   justify-content: space-between;
   width: 84%;
-  gap: 2rem;
+  gap: 1rem;
   padding: 0 1rem 0 0;
+  margin: 0 auto;
 }
 
 .continer {
@@ -47,5 +60,6 @@ html {
   overflow: hidden;
   gap: 2rem;
   padding: 0 1rem 0 0;
+  margin: 0 auto;
 }
 </style>
