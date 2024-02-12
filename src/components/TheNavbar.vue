@@ -173,8 +173,15 @@ onUnmounted(() => {
 a {
   color: rgb(170, 170, 170);
   font-weight: 600;
+}
 
-  &:hover {
+html {
+  a:hover {
+    color: black;
+  }
+}
+html.dark {
+  a:hover {
     color: white;
   }
 }

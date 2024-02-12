@@ -50,7 +50,7 @@ import CountDown from "../components/CountDown.vue";
     <hr />
     <div space-y-3xl>
       <h2 font-base font-700 text-xl>Coding Profiles</h2>
-      <ul flex="~ row justify-between">
+      <ul flex="~ row justify-between" class="test">
         <li>
           <a
             href="https://github.com/hazemhamdyabdo"
@@ -93,6 +93,17 @@ import CountDown from "../components/CountDown.vue";
 </template>
 
 <style lang="scss" scoped>
+html {
+  .test a:hover {
+    color: black;
+    font-weight: 700;
+  }
+}
+html.dark {
+  a:hover {
+    color: lightgray;
+  }
+}
 .continer {
   width: 50%;
   display: flex;
