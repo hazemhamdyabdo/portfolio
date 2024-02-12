@@ -39,7 +39,7 @@ onUnmounted(() => {
       <RouterLink :to="{ name: 'projects' }">Projects</RouterLink>
       <!-- <RouterLink :to="{ name: 'demos' }">Demos</RouterLink> -->
       <a
-        href="https://www.dropbox.com/scl/fi/l98t4oz20c1cp3jyhvnms/HAZEM-HAMDY-REUSME.pdf?rlkey=enthmog3u4wce6srn4bnrs7s7&dl=0"
+        href="https://www.dropbox.com/scl/fi/h4zsd5qs6irqcnsbr23k6/HAZEM-HAMDY.pdf?rlkey=xqxron6o1d2zylsezbjjtfxhl&dl=0"
         target="_blank"
         >Reusme</a
       >
@@ -117,7 +117,7 @@ onUnmounted(() => {
       <RouterLink :to="{ name: 'projects' }">Projects</RouterLink>
       <!-- <RouterLink :to="{ name: 'demos' }">Demos</RouterLink> -->
       <a
-        href="https://www.dropbox.com/scl/fi/l98t4oz20c1cp3jyhvnms/HAZEM-HAMDY-REUSME.pdf?rlkey=enthmog3u4wce6srn4bnrs7s7&dl=0"
+        href="https://www.dropbox.com/scl/fi/h4zsd5qs6irqcnsbr23k6/HAZEM-HAMDY.pdf?rlkey=xqxron6o1d2zylsezbjjtfxhl&dl=0"
         target="_blank"
         >Reusme</a
       >
