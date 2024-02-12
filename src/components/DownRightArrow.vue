@@ -97,6 +97,7 @@
   padding: 0px 30px;
   margin: 0px auto;
   pointer-events: none;
+  margin-top: -6rem;
 }
 .icon {
   width: 100%;

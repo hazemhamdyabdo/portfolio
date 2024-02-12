@@ -130,4 +130,11 @@ ul > li > a {
     color: white;
   }
 }
+
+@media only screen and (max-width: 800px) {
+  .continer {
+    padding: 0 1rem;
+    width: auto;
+  }
+}
 </style>

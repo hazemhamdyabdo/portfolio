@@ -81,4 +81,16 @@ ul#countdown {
     }
   }
 }
+
+@media only screen and (max-width: 800px) {
+  ul#countdown {
+    li {
+      font-size: 5.5vw;
+
+      & .label {
+        font-size: 2vw;
+      }
+    }
+  }
+}
 </style>

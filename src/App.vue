@@ -3,7 +3,6 @@
     <TheNavbar />
   </nav>
   <main flex="~ justify-center items-center">
-    <!-- <component></component> -->
     <RouterView v-slot="{ Component }">
       <Transition name="fade" mode="out-in">
         <component :is="Component"></component>

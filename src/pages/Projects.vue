@@ -9,27 +9,24 @@ import DownRightArrow from "@/components/DownRightArrow.vue";
 <template>
   <section class="sec slide-enter">
     <div>
-      <div class="continer">
-        <Payaino />
-      </div>
+      <Payaino />
       <DownLeftArrow />
     </div>
     <div>
-      <div class="center">
-        <Sable />
-      </div>
+      <Sable />
       <DownRightArrow />
+      <!-- <DownLeftArrow /> -->
     </div>
-    <div class="center">
-      <Dory />
-    </div>
+    <Dory />
   </section>
 </template>
 
 <style scoped lang="scss">
 .sec {
-  display: grid;
-  place-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   gap: 1rem;
 }
 html.dark {
@@ -42,24 +39,10 @@ html {
     border: 2px solid rgba(20, 17, 17, 0.801);
   }
 }
-
-.center {
-  display: flex;
-  justify-content: space-between;
-  width: 84%;
-  gap: 1rem;
-  padding: 0 1rem 0 0;
-  margin: 0 auto;
-}
-
-.continer {
-  display: flex;
-  justify-content: space-between;
-  width: 84%;
-  border-radius: 8px;
-  overflow: hidden;
-  gap: 2rem;
-  padding: 0 1rem 0 0;
-  margin: 0 auto;
+@media only screen and (max-width: 715px) {
+  .sec {
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
 }
 </style>
