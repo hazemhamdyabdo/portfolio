@@ -12,7 +12,11 @@
 
     <div font-base flex="~ col" gap-3 pt-5 class="main">
       <h2>
-        <a href="https://www.dorysoftware.com/" n-link-text font-700
+        <a
+          href="https://www.dorysoftware.com/"
+          n-link-text
+          font-700
+          target="_blank"
           >@DorySoftware</a
         >
       </h2>
@@ -55,7 +59,7 @@
 .img {
   // width: auto;
   & img {
-    width: 1720px;
+    max-width: 620px;
     height: 320px;
   }
   .two,
@@ -90,17 +94,10 @@
 }
 @media (max-width: 1400px) {
   .img {
-    width: 1350px;
-    .two,
-    .three,
-    .four {
-      width: 550px;
-    }
-  }
-}
-@media (max-width: 1400px) {
-  .img {
     width: 1150px;
+    & img {
+      max-width: 500px;
+    }
     .two,
     .three,
     .four {
@@ -115,6 +112,9 @@
   }
   .img {
     width: 680px;
+    & img {
+      max-width: 480px;
+    }
     .two,
     .three,
     .four {
@@ -125,6 +125,9 @@
 @media (max-width: 1200px) {
   .img {
     width: 520px;
+    & img {
+      max-width: 380px;
+    }
     .two,
     .three,
     .four {
@@ -138,6 +141,9 @@
   }
   .img {
     width: 380px;
+    & img {
+      max-width: 375px;
+    }
     .two,
     .three,
     .four {
@@ -151,6 +157,9 @@
   }
   .img {
     width: 360px;
+    & img {
+      width: 100%;
+    }
     .two,
     .three,
     .four {
@@ -171,6 +180,23 @@
     }
     .img {
       width: auto;
+      & img {
+        max-width: 100%;
+      }
+      .two,
+      .three,
+      .four {
+        display: none;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .center {
+    .img {
+      width: auto;
+      height: auto;
       .two,
       .three,
       .four {

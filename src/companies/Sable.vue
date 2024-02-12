@@ -68,7 +68,7 @@ const hoerMe = () => {
 .img {
   // width: 1750px;
   & img {
-    width: 1750px;
+    max-width: 620px;
     height: 320px;
     filter: brightness(1.2);
   }
@@ -120,6 +120,9 @@ const hoerMe = () => {
 @media (max-width: 1400px) {
   .img {
     width: 1350px;
+    & img {
+      max-width: 550px;
+    }
     .two,
     .three,
     .four {
@@ -130,6 +133,9 @@ const hoerMe = () => {
 @media (max-width: 1300px) {
   .img {
     width: 1250px;
+    & img {
+      max-width: 500px;
+    }
     .two,
     .three,
     .four {
@@ -143,6 +149,9 @@ const hoerMe = () => {
   }
   .img {
     width: 1050px;
+    & img {
+      max-width: 400px;
+    }
     .two,
     .three,
     .four {
@@ -172,7 +181,9 @@ const hoerMe = () => {
   }
   .img {
     width: 950px;
-
+    & img {
+      max-width: 350px;
+    }
     .two,
     .three,
     .four {
@@ -186,6 +197,9 @@ const hoerMe = () => {
   }
   .img {
     width: 890px;
+    & img {
+      max-width: 33.2rem;
+    }
     .two,
     .three,
     .four {
@@ -206,6 +220,9 @@ const hoerMe = () => {
 
     .img {
       width: auto;
+      & img {
+        width: 100%;
+      }
 
       .two,
       .three,
