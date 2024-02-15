@@ -108,26 +108,23 @@ const hoerMe = () => {
     height: fit-content;
   }
 }
+.tooltip {
+  background-color: transparent;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  color: RED;
+  font-weight: 600;
+}
 
 html.dark {
   .tooltip {
-    background-color: transparent;
-    padding: 0.5rem;
     border: 1px solid white;
-    border-radius: 0.5rem;
-    color: RED;
-    font-weight: 600;
   }
 }
 
 html {
   .tooltip {
-    background-color: transparent;
-    padding: 0.5rem;
     border: 1px solid black;
-    border-radius: 0.5rem;
-    color: RED;
-    font-weight: 600;
   }
 }
 @media (max-width: 1400px) {
