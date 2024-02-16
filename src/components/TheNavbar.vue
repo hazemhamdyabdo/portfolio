@@ -41,7 +41,7 @@ onUnmounted(() => {
       <a
         href="https://www.dropbox.com/scl/fi/h4zsd5qs6irqcnsbr23k6/HAZEM-HAMDY.pdf?rlkey=xqxron6o1d2zylsezbjjtfxhl&dl=0"
         target="_blank"
-        >Reusme</a
+        >Resume</a
       >
 
       <a
@@ -119,7 +119,7 @@ onUnmounted(() => {
       <a
         href="https://www.dropbox.com/scl/fi/h4zsd5qs6irqcnsbr23k6/HAZEM-HAMDY.pdf?rlkey=xqxron6o1d2zylsezbjjtfxhl&dl=0"
         target="_blank"
-        >Reusme</a
+        >Resume</a
       >
 
       <a
