@@ -31,7 +31,7 @@ onUnmounted(() => {
 
 <template>
   <nav flex="~ items-center justify-between" p4 px7 relative>
-    <RouterLink to="/" z-80>
+    <RouterLink to="/" z-80 class="logo">
       <MainLogo width="9rem" title="Hazem" />
     </RouterLink>
     <ul text-white flex="~ row " gap-5 class="hide">
@@ -170,6 +170,15 @@ onUnmounted(() => {
 </template>
 
 <style lang="scss" scoped>
+a.router-link-active:not(.logo) {
+  border-bottom: 1px solid white;
+  outline-offset: 0.6rem;
+  border-radius: 6px;
+  padding-bottom: 5px;
+
+  // outline: 1px ridge rgba(170, 50, 220, 0.6);
+}
+
 a {
   color: rgb(170, 170, 170);
   font-weight: 600;

@@ -1,12 +1,16 @@
 import { createRouter, createWebHistory } from "vue-router";
 import NProgress from "nprogress";
+import PlumVue from "@/interactivity/Plum.vue";
 
 const routes = [
   { path: "/", name: "home", component: () => import("../pages/Home.vue") },
   {
     path: "/blogs",
     name: "blogs",
-    component: () => import("../pages/Blogs.vue"),
+    components: {
+      default: () => import("../pages/Blogs.vue"),
+      plum: PlumVue,
+    },
   },
   {
     path: "/blogs/:title",
