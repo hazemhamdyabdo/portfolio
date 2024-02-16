@@ -171,12 +171,15 @@ onUnmounted(() => {
 
 <style lang="scss" scoped>
 a.router-link-active:not(.logo) {
-  border-bottom: 1px solid white;
+  border-bottom: 1px solid black;
   outline-offset: 0.6rem;
   border-radius: 6px;
   padding-bottom: 5px;
-
-  // outline: 1px ridge rgba(170, 50, 220, 0.6);
+}
+html.dark {
+  a.router-link-active:not(.logo) {
+    border-bottom: 1px solid white;
+  }
 }
 
 a {
