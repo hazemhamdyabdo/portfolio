@@ -9,7 +9,13 @@ const hoerMe = () => {
 <template>
   <section class="center">
     <div class="main" font-base flex="~ col" gap-3 pt-5 relative>
-      <p absolute top="-10" left="0" v-if="isHoverd" w-fit class="tooltip">
+      <p
+        absolute
+        top="-10"
+        left="0"
+        :class="['tooltip', { 'opacity-0': !isHoverd }]"
+        w-fit
+      >
         No website yet
       </p>
 
@@ -114,6 +120,7 @@ const hoerMe = () => {
   border-radius: 0.5rem;
   color: RED;
   font-weight: 600;
+  transition: all 0.5s ease-in-out;
 }
 
 html.dark {
