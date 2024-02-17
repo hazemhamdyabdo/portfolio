@@ -39,8 +39,9 @@ onUnmounted(() => {
       <RouterLink :to="{ name: 'projects' }">Projects</RouterLink>
       <!-- <RouterLink :to="{ name: 'demos' }">Demos</RouterLink> -->
       <a
-        href="https://www.dropbox.com/scl/fi/h4zsd5qs6irqcnsbr23k6/HAZEM-HAMDY.pdf?rlkey=xqxron6o1d2zylsezbjjtfxhl&dl=0"
+        href="https://drive.google.com/file/d/1SMsMDwonUFmxodRur_XvkMRIWWTBpMza/view?usp=sharing"
         target="_blank"
+        download=""
         >Resume</a
       >
 
@@ -117,7 +118,7 @@ onUnmounted(() => {
       <RouterLink :to="{ name: 'projects' }">Projects</RouterLink>
       <!-- <RouterLink :to="{ name: 'demos' }">Demos</RouterLink> -->
       <a
-        href="https://www.dropbox.com/scl/fi/h4zsd5qs6irqcnsbr23k6/HAZEM-HAMDY.pdf?rlkey=xqxron6o1d2zylsezbjjtfxhl&dl=0"
+        href="https://drive.google.com/file/d/1SMsMDwonUFmxodRur_XvkMRIWWTBpMza/view?usp=sharing"
         target="_blank"
         >Resume</a
       >
