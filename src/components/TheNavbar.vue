@@ -41,7 +41,6 @@ onUnmounted(() => {
       <a
         href="https://drive.google.com/file/d/1SMsMDwonUFmxodRur_XvkMRIWWTBpMza/view?usp=sharing"
         target="_blank"
-        download=""
         >Resume</a
       >
 
