@@ -1,14 +1,20 @@
 <template>
-  <section class="continer">
-    <div class="img">
-      <img src="@/assets/payiano.png" alt="Payaino Landing-page" />
+  <section class="center">
+    <div class="img" relative mb-30>
+      <div b="~ solid 2">
+        <img src="@/assets/payiano.png" alt="Payaino Landing-page" />
+      </div>
+      <div class="two" absolute></div>
+      <div class="three" absolute></div>
+      <div class="four" absolute></div>
     </div>
-    <div flex="~ col " gap-2 pt-5 class="content">
-      <h3 dark:text-white font-600>
+
+    <div font-base flex="~ col" gap-3 pt-5 class="main">
+      <h2 dark:text-white font-600>
         <a href="https://payiano.com/" dark:n-link-text target="_blank">
           @Payiano
         </a>
-      </h3>
+      </h2>
       <p font-base>
         At Payiano, we provide all the necessary tools to create websites and
         applications that enable payment acceptance and payout distribution. Our
@@ -47,65 +53,159 @@
 </template>
 
 <style scoped lang="scss">
-.img {
-  max-height: max-content;
-  & img {
-    height: 450px;
-    width: 120rem;
-  }
-}
-
-.continer {
+.center {
   display: flex;
   justify-content: space-between;
   width: 84%;
-  border-radius: 8px;
-  overflow: hidden;
   gap: 2rem;
   margin: 0 auto;
 }
+.img {
+  // width: auto;
+  & img {
+    max-width: 620px;
+    height: 320px;
+  }
+  .two,
+  .three,
+  .four {
+    top: 0rem;
+    width: 532px;
+    height: 320px;
+  }
 
-@media only screen and (max-width: 1407px) {
-  .content {
-    font-size: 1em;
+  .two {
+    right: 0.8rem;
+    top: 0.8rem;
+    z-index: -1;
+    background-color: black;
+    border: 2px solid rgba(255, 255, 255, 0.918);
+  }
+  .three {
+    right: 1.5rem;
+    top: 1.5rem;
+    z-index: -2;
+    background-color: black;
+    border: 2px solid rgba(255, 255, 255, 0.718);
+  }
+  .four {
+    right: 2rem;
+    top: 2rem;
+    z-index: -3;
+    background-color: black;
+    border: 2px solid rgba(255, 255, 255, 0.518);
   }
 }
-@media only screen and (max-width: 1235px) {
-  .content {
-    font-size: 0.9em;
+@media (max-width: 1400px) {
+  .img {
+    width: 1150px;
+    & img {
+      max-width: 500px;
+    }
+    .two,
+    .three,
+    .four {
+      width: 500px;
+    }
   }
 }
-@media only screen and (max-width: 1166px) {
-  .content {
-    font-size: 0.85em;
+@media (max-width: 1300px) {
+  .main {
+    font-size: 0.85rem;
+    width: 80%;
+  }
+  .img {
+    width: 680px;
+    & img {
+      max-width: 480px;
+    }
+    .two,
+    .three,
+    .four {
+      width: 480px;
+    }
   }
 }
-@media only screen and (max-width: 1001px) {
-  .content {
-    font-size: 0.8em;
+@media (max-width: 1200px) {
+  .img {
+    width: 520px;
+    & img {
+      max-width: 380px;
+    }
+    .two,
+    .three,
+    .four {
+      width: 380px;
+    }
   }
 }
-@media only screen and (max-width: 941px) {
-  .content {
-    font-size: 0.75em;
+@media (max-width: 1100px) {
+  .main {
+    width: 60%;
+  }
+  .img {
+    width: 380px;
+    & img {
+      max-width: 375px;
+    }
+    .two,
+    .three,
+    .four {
+      width: 370px;
+    }
   }
 }
-@media only screen and (max-width: 794px) {
-  .content {
-    font-size: 0.7em;
+@media (max-width: 1000px) {
+  .center {
+    padding-left: 8rem;
+  }
+  .img {
+    width: 360px;
+    & img {
+      width: 100%;
+    }
+    .two,
+    .three,
+    .four {
+      width: 340px;
+    }
   }
 }
 @media only screen and (max-width: 715px) {
-  .continer {
+  .center {
     flex-direction: column;
-    gap: 0rem;
     width: 80%;
-
-    & .content {
-      padding: 6px;
+    gap: 0;
+    padding: 0;
+    .main {
+      width: 100%;
+      padding: 0;
+      margin-top: -5rem;
     }
-    & img {
+    .img {
       width: auto;
+      & img {
+        max-width: 100%;
+      }
+      .two,
+      .three,
+      .four {
+        display: none;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .center {
+    .img {
+      width: auto;
+      height: auto;
+      .two,
+      .three,
+      .four {
+        display: none;
+      }
     }
   }
 }

@@ -14,6 +14,12 @@ import CountDown from "../components/CountDown.vue";
     <CountDown />
     <p font-base>
       Working at
+      <a href="https://hectar.io/" target="_blank" text-black dark:text-white
+        >Hectar</a
+      >. An integrated system for managing business operations and procedures for real estate entities.alsp property mangement platform that offers users access to various features through an easy-to-use control panel. 
+    </p>
+    <p font-base>
+      Worked at
       <a href="https://payiano.com/" target="_blank" text-black dark:text-white
         >Payiano</a
       >. it is a digital payments platform that helps merchants, corporates, and

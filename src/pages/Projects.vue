@@ -4,17 +4,20 @@ import Dory from "@/companies/Dory.vue";
 import Sable from "@/companies/Sable.vue";
 import DownLeftArrow from "@/components/DownLeftArrow.vue";
 import DownRightArrow from "@/components/DownRightArrow.vue";
+import Hectar from "@/companies/Hectar.vue";
 </script>
 
 <template>
   <section class="sec slide-enter">
     <div>
-      <Payaino />
+      <Hectar />
       <DownLeftArrow />
     </div>
     <div>
-      <Sable />
+      <Payaino />
       <DownRightArrow />
+      <Sable />
+      <DownLeftArrow />
       <!-- <DownLeftArrow /> -->
     </div>
     <Dory />

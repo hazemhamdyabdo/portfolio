@@ -1,4 +1,3 @@
-<script setup lang="ts"></script>
 <template>
   <section class="center">
     <div class="img" relative mb-30>
