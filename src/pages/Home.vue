@@ -16,7 +16,9 @@ import CountDown from "../components/CountDown.vue";
       Working at
       <a href="https://hectar.io/" target="_blank" text-black dark:text-white
         >Hectar</a
-      >. An integrated system for managing business operations and procedures for real estate entities.alsp property mangement platform that offers users access to various features through an easy-to-use control panel. 
+      >. An integrated system for managing business operations and procedures
+      for real estate entities.also property mangement platform that offers
+      users access to various features through an easy-to-use control panel.
     </p>
     <p font-base>
       Worked at

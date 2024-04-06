@@ -5,6 +5,7 @@ import Sable from "@/companies/Sable.vue";
 import DownLeftArrow from "@/components/DownLeftArrow.vue";
 import DownRightArrow from "@/components/DownRightArrow.vue";
 import Hectar from "@/companies/Hectar.vue";
+import Dream from "@/companies/Dream.vue";
 </script>
 
 <template>
@@ -14,10 +15,12 @@ import Hectar from "@/companies/Hectar.vue";
       <DownLeftArrow />
     </div>
     <div>
-      <Payaino />
+      <Dream />
       <DownRightArrow />
-      <Sable />
+      <Payaino />
       <DownLeftArrow />
+      <Sable />
+      <DownRightArrow />
       <!-- <DownLeftArrow /> -->
     </div>
     <Dory />

@@ -10,8 +10,9 @@
         </a>
       </h3>
       <p font-base>
-        At Hectar, We Creating and maintaining the software components of the
-        system, including both frontend and backend development.
+        At Hectar, We play a crucial role in creating an engaging and
+        user-friendly interface for real estate entities to manage their
+        business operations and procedures effectively.
       </p>
       <div>
         <h4 third-head mb-4>My Responsibilities</h4>
