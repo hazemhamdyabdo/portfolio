@@ -15,7 +15,7 @@ import BlogYear from "@/components/BlogYear.vue";
                 :to="{
                   name: 'content',
                   params: {
-                    title: blog.title.split(' ').join('-'),
+                    title: blog.route ?? blog.title.split(' ').join('-'),
                   },
                 }"
                 >{{ blog.title }}

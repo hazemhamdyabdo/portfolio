@@ -6,10 +6,23 @@ const shortCuts = (title: string) =>
 
 const blogs = [
   {
+    title: "Vue 3 Reactivity System Is Brilliant!",
+    route:"vue-3-reactivity-system-is-brilliant",
+    date: "1 Apr",
+    duration: 15,
+  },
+  {
+    title: "SOLID Principles Design Patterns and Functional Programming",
+    route:"solid-principles-design-patterns-and-functional-programming",
+    date: "8 Feb",
+    duration: 18,
+  },
+  {
     title: "Nuxt VS Vue",
     date: "4 Jun",
     duration: 12,
   },
+  
 ];
 
 const PreBlogs = [

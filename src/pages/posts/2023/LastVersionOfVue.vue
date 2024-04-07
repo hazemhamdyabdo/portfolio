@@ -100,7 +100,7 @@ background-color: rgb(255, 255, 255); color: rgb(57, 58, 52);
   </PostLayout>
 </template>
 
-<style scoped>
+<style>
 .tages {
   background-color: #121212;
   color: #dbd7caee;

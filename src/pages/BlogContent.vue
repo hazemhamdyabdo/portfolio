@@ -5,6 +5,8 @@ import CompositionApiInVue from "@/pages/posts/2023/CompositionApiInVue.vue";
 import ComposableVsMixins from "@/pages/posts/2023/ComposableVsMixins.vue";
 import CommonVueMistakes from "@/pages/posts/2023/CommonVueMistakes.vue";
 import Vue3MigrationNotes from "@/pages/posts/2023/Vue3MigrationNotes.vue";
+import SolidPrinciplesDesignPatternsAndFunctionalProgramming from "@/pages/posts/2024/SolidPrinciplesDesignPatternsAndFunctionalProgramming.vue";
+import Vue3ReactivitySystemIsBrilliant from "@/pages/posts/2024/Vue3Reactivity.vue";
 import { computed } from "vue";
 import { useRoute } from "vue-router";
 import ChervenRight from "@/components/icons/ChervenRight.vue";
@@ -16,9 +18,9 @@ const cap = computed(() => {
     .split("-")
     .map((e: string) => e[0].toUpperCase() + e.toLowerCase().slice(1))
     .join("");
+  console.log(fixed);
   return fixed;
 });
-// cap();
 const blogs: any = {
   LastVersionOfVue,
   NuxtVsVue,
@@ -26,12 +28,14 @@ const blogs: any = {
   ComposableVsMixins,
   CommonVueMistakes,
   Vue3MigrationNotes,
+  SolidPrinciplesDesignPatternsAndFunctionalProgramming,
+  Vue3ReactivitySystemIsBrilliant,
 };
 </script>
 
 <template>
   <div px-7 py-10 of-x-hidden class="slide-enter">
-    <component :is="blogs[cap]"> </component>
+    <Component :is="blogs[cap]" />
     <button class="btn" font-base @click="$router.back()">
       <span text-xl><ChervenRight /></span>
       <p>cd ..</p>
