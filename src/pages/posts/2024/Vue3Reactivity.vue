@@ -5,22 +5,23 @@ import PostLayout from "@/layout/PostLayout.vue";
 <template>
   <PostLayout>
     <h2 second-head>
-      Vue 3 Reactivity System Is Brilliant! Here’s How It Works - Part 1
+      Exploring the Brilliance of Vue 3's Reactivity System: A Comprehensive
+      Guide - Part 1
     </h2>
     <h3 sub-head>what do we mean by reactivity?</h3>
     <p text-base>
-      Being a frontend developer nowadays means that you're dealing with
-      reactivity on a daily basis. Basically, it is the seamless mapping between
-      the application state and the DOM. Any change in the application state
-      will instantly be reflected on the DOM without the need to handle this
-      Manually, just change the state and let the framework do the rest of the
-      work for you.
+      Today, frontend developers work with reactivity as a core concept. It's
+      the automatic synchronization between the application state and the DOM.
+      Changes in the state are immediately mirrored in the DOM, eliminating the
+      need for manual handling. Simply update the state, and the framework takes
+      care of the rest
     </p>
     <p>
       Simply put, the framework is handling this
       <em>
-        "Oh! the price has changed, update the DOM with the new price and update
-        any other variables that are depending on this price too."</em
+        "The price has been updated. Please refresh the DOM with the new price
+        and ensure that any other variables dependent on this price are also
+        updated accordingly."</em
       >
     </p>
     <img src="@/assets/image1.png" alt="image" />
@@ -58,9 +59,9 @@ import PostLayout from "@/layout/PostLayout.vue";
       </em>
     </p>
     <p text-base>
-      Let's tackle the proble, step by step, each step will be built above the
-      previous step until we build a whole <strong> reactivty system</strong> at
-      the end.
+      Let's address the problem incrementally, building each step upon the
+      previous one until we construct a complete
+      <strong>reactivity system</strong>.
     </p>
     <p text-base>
       First of all, we can wrap the code that updates
@@ -96,7 +97,10 @@ import PostLayout from "@/layout/PostLayout.vue";
       >
       comes into play.
     </p>
-    <h3 sub-head>introducing Javascript Proxy</h3>
+    <h3 sub-head>
+      Introducing JavaScript Proxy: A Powerful Tool for Dynamic Object
+      Interception and Custom Behavior
+    </h3>
     <em text-base>
       The <span class="tages"> Proxy</span> object enables you to create a proxy
       for another object, whiche can intercept and redefine fundamental
@@ -179,35 +183,36 @@ import PostLayout from "@/layout/PostLayout.vue";
       </li>
     </ul>
     <pre class="tages pt--4" text-lg>
-    let product = {price:20 , quantity:5}
-    let proxyProduct = new Proxy(product, {
-      get(target, property, receiver){
-        console.log(`getting ${property} from ${receiver}`)
-        return target[property] 
-      },
-      set(target, property, value, receiver){
-        console.log(`setting ${property} to ${value} from ${receiver}`)
-        target[property] = value
-        return true
-      }
-    })
-    cosnole.log(proxyProduct.price) 
-    // getting price from product 
-    // then, returns 20
+      let product = {price: 20, quantity: 5};
+      let proxyProduct = new Proxy(product, {
+        get(target, property, receiver) {
+          console.log(`getting ${property} from ${receiver}`);
+          return target[property];
+        },
+        set(target, property, value, receiver) {
+          console.log(`setting ${property} to ${value} from ${receiver}`);
+          target[property] = value;
+          return true;
+        }
+      });
 
-    proxyProduct.price = 30
-    cosnole.log(proxyProduct.price) 
-    // setting price to 30 from product
-    // then, Set value to 30
+      console.log(proxyProduct.price);
+      // Output: getting price from [object Object]
+      // Output: 20
+
+      proxyProduct.price = 30;
+      console.log(proxyProduct.price);
+      // Output: setting price to 30 from [object Object]
+      // Output: 30
     </pre>
     <p text-base>
-      Can you see it now? 🤔 At first we were looking for a way to automatically
-      detect that a property's value has changed to call the
-      <span class="tages"> updateTotalPrice</span> function. Now, that we have
-      what we were looking for we can simply use a Proxy with a setter to
-      achieve that
+      Do you see it now? 🤔 Initially, we sought a method to automatically
+      detect changes in a property's value to trigger the
+      <span class="tages">updateTotalPrice</span> function. Now that we've found
+      what we were seeking, we can easily employ a Proxy with a setter to
+      accomplish this.
     </p>
-    <h2 second-head>Back to Or Main Problem</h2>
+    <h2 second-head>Returning to Our Main Challenge</h2>
     <h3 third-head>
       Improvement 1: calling <span class="tages">updateTotalPrice</span>
       function inside the setter
@@ -242,11 +247,10 @@ import PostLayout from "@/layout/PostLayout.vue";
     // 150 🥳
     </pre>
     <p text-base>
-      Just before leaving this point, we don't need redundant
-      <span class="tages">updateTotalPrice</span> function for any chang happen
-      in the property but what if we change the price form 20 to 20 also then it
-      not updated so we don't need to recall function. Therefore, we're going to
-      change the code a little bit
+      Before moving on, we must eliminate redundant calls to the
+      <span class="tages"> updateTotalPrice </span> function for property
+      changes. However, if the price remains the same (e.g., from 20 to 20), it
+      doesn't trigger an update. Let's modify the code accordingly.
     </p>
     <pre class="tages pt--4" text-lg>
     let proxyProduct = new Proxy(product, {
