@@ -6,7 +6,7 @@ const shortCuts = (title: string) =>
 
 const blogs = [
   {
-    title: "Vue 3 Reactivity System Is Brilliant!",
+    title: "Is Vue 3's Reactivity System Truly Remarkable? Let's Find Out!",
     route:"vue-3-reactivity-system-is-brilliant",
     date: "1 Apr",
     duration: 15,

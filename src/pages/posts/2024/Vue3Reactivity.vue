@@ -24,14 +24,12 @@ import PostLayout from "@/layout/PostLayout.vue";
         updated accordingly."</em
       >
     </p>
-    <img src="@/assets/image1.png" alt="image" />
-    <h3 sub-head>
-      Reactivity Hello World! What Problem We’re Trying to Solve?
-    </h3>
+    <img src="@/assets/reactive.webp" alt="image" />
+    <h3 sub-head>Exploring Reactivity</h3>
     <p text-base>
       Let's consider this example. we have a product that has a
       <span class="tages">price</span> and a
-      <span class="tages"> quantity</span> and there's amother variable
+      <span class="tages">quantity</span> and there's amother variable
       <span class="tages">totalPrice</span> that is being computed form
       <span class="tages">price</span> and <span class="tages">quantity</span>
     </p>
@@ -112,7 +110,7 @@ import PostLayout from "@/layout/PostLayout.vue";
       <strong>setting</strong> a value of an object. And applying whatever logic
       we need on each opreation.
     </p>
-    <img src="@/assets/image.png" alt="Proxy" />
+    <img src="@/assets/javascriptProxy.png" alt="Proxy" />
     <p text-base>The proxy constructor takes 2 parameters.</p>
     <ul>
       <li>
@@ -206,8 +204,8 @@ import PostLayout from "@/layout/PostLayout.vue";
       // Output: 30
     </pre>
     <p text-base>
-      Do you see it now? 🤔 Initially, we sought a method to automatically
-      detect changes in a property's value to trigger the
+      Do you see it now? Initially, we sought a method to automatically detect
+      changes in a property's value to trigger the
       <span class="tages">updateTotalPrice</span> function. Now that we've found
       what we were seeking, we can easily employ a Proxy with a setter to
       accomplish this.
