@@ -58,4 +58,13 @@ a {
     color: rgb(95, 95, 95);
   }
 }
+@media (max-width: 460px) {
+  .slide-enter {
+    padding-left: 1rem;
+
+    & a {
+      font-size: 15px;
+    }
+  }
+}
 </style>

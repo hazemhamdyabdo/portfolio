@@ -5,7 +5,7 @@ import BlogYear from "@/components/BlogYear.vue";
 
 <template>
   <section>
-    <div relative>
+    <div class="container" relative>
       <BlogYear :year="2024" />
       <ul font-base space-y-2xl text-xl>
         <li v-for="blog in blogs" :key="blog.title">
@@ -55,6 +55,16 @@ a {
 
     margin-left: -0.5rem;
     color: rgb(95, 95, 95);
+  }
+}
+
+@media (max-width: 460px) {
+  .container {
+    padding-left: 1rem;
+
+    & a {
+      font-size: 15px;
+    }
   }
 }
 </style>

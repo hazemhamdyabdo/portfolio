@@ -5,6 +5,7 @@ defineProps<{ year: number }>();
 <template>
   <div>
     <span
+      class="blog-year"
       text-8em
       color-transparent
       absolute
@@ -20,4 +21,10 @@ defineProps<{ year: number }>();
   </div>
 </template>
 
-<style scoped lang="scss"></style>
+<style scoped lang="scss">
+@media (max-width: 460px) {
+  .blog-year {
+    left: -0.6rem;
+  }
+}
+</style>
