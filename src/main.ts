@@ -5,10 +5,13 @@ import "virtual:uno.css";
 import App from "./App.vue";
 import { Router } from "./router/index.ts";
 import { createRouterScroller } from "vue-router-better-scroller";
+import VNetworkGraph from "v-network-graph";
+import "v-network-graph/lib/style.css";
 
 const html = document.querySelector("html")!;
 createApp(App)
   .use(Router)
+  .use(VNetworkGraph)
   .use(
     createRouterScroller({
       selectors: {

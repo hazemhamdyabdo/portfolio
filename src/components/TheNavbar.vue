@@ -35,6 +35,7 @@ onUnmounted(() => {
       <MainLogo width="9rem" title="Hazem" />
     </RouterLink>
     <ul text-white flex="~ row " gap-5 class="hide">
+      <RouterLink :to="{ name: 'skills' }">Skills</RouterLink>
       <RouterLink :to="{ name: 'blogs' }">Blog</RouterLink>
       <RouterLink :to="{ name: 'projects' }">Projects</RouterLink>
       <!-- <RouterLink :to="{ name: 'demos' }">Demos</RouterLink> -->
@@ -113,6 +114,7 @@ onUnmounted(() => {
       :class="{ active: isMenueOpen }"
       @click="isMenueOpen = !isMenueOpen"
     >
+      <RouterLink :to="{ name: 'skills' }">Skills</RouterLink>
       <RouterLink :to="{ name: 'blogs' }">Blog</RouterLink>
       <RouterLink :to="{ name: 'projects' }">Projects</RouterLink>
       <!-- <RouterLink :to="{ name: 'demos' }">Demos</RouterLink> -->
