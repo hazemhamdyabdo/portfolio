@@ -31,5 +31,4 @@
     "src/router/index.ts",
     "src/main.ts"
   ],
-  "references": [{ "path": "./tsconfig.node.json" }]
 }
