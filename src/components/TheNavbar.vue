@@ -1,4 +1,7 @@
 <script setup lang="ts">
+import { ref, onMounted, onUnmounted } from "vue";
+
+import { toggleDark, isDark } from "@/composables/toggle.ts";
 import MainLogo from "./MainLogo.vue";
 import MoonIcon from "./icons/MoonIcon.vue";
 import SunIcon from "./icons/SunIcon.vue";
@@ -8,9 +11,6 @@ import EmailsIcon from "./icons/EmailsIcon.vue";
 import WhatsAppIcon from "./icons/WhatsAppIcon.vue";
 import HamburgerMenue from "./icons/HamburgerMenue.vue";
 import MenuClose from "./icons/MenuClose.vue";
-
-import { toggleDark, isDark } from "@/composables/toggle.ts";
-import { ref, onMounted, onUnmounted } from "vue";
 
 const isMenueOpen = ref(false);
 const onScroll = () => {
@@ -39,7 +39,7 @@ onUnmounted(() => {
       <RouterLink :to="{ name: 'projects' }">Projects</RouterLink>
       <!-- <RouterLink :to="{ name: 'demos' }">Demos</RouterLink> -->
       <a
-        href="https://drive.google.com/file/d/1eWG9nhQQH-XRt_vkBMtuJVO-SVvpVaXd/view?usp=sharing"
+        href="https://drive.google.com/file/d/1uW1JPc54JU0XTjHnBGj6JxK9k8nqB93e/view"
         target="_blank"
         >Resume</a
       >
@@ -117,7 +117,7 @@ onUnmounted(() => {
       <RouterLink :to="{ name: 'projects' }">Projects</RouterLink>
       <!-- <RouterLink :to="{ name: 'demos' }">Demos</RouterLink> -->
       <a
-        href="https://drive.google.com/file/d/1eWG9nhQQH-XRt_vkBMtuJVO-SVvpVaXd/view?usp=sharing"
+        href="https://drive.google.com/file/d/1uW1JPc54JU0XTjHnBGj6JxK9k8nqB93e/view"
         target="_blank"
         >Resume</a
       >
