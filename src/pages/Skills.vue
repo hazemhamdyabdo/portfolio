@@ -1,7 +1,11 @@
 <script setup lang="ts">
 import { computed, reactive, ref } from "vue";
 import * as vNG from "v-network-graph";
-import { ForceLayout } from "v-network-graph/lib/force-layout";
+import {
+  ForceLayout,
+  ForceNodeDatum,
+  ForceEdgeDatum,
+} from "v-network-graph/lib/force-layout";
 
 import { TreeNodes, TreeNode } from "@/components/graph/data";
 import * as data from "@/components/graph/data";
@@ -37,8 +41,20 @@ adjustNodeSpacing(layouts.nodes, scaleFactor);
 const configs = reactive(
   vNG.defineConfigs<TreeNode>({
     view: {
-      layoutHandler: new vNG.GridLayout({ grid: 15 }),
-      //  new ForceLayout({}),
+      layoutHandler: new ForceLayout({
+        positionFixedByClickWithAltKey: true,
+        createSimulation: (d3, nodes, edges) => {
+          const forceLink = d3
+            .forceLink<ForceNodeDatum, ForceEdgeDatum>(edges)
+            .id((d: ForceNodeDatum) => d.id);
+          return d3
+            .forceSimulation(nodes)
+            .force("edge", forceLink.distance(100).strength(0.5))
+            .force("charge", d3.forceManyBody().strength(-1000))
+            .force("center", d3.forceCenter().strength(0.05))
+            .alphaMin(0.001);
+        },
+      }),
     },
     node: {
       normal: {
