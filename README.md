@@ -1,2 +1,2 @@
 # portfolio with
-Vue 3 + TypeScript + Unocss + tailwind + scss + PrimeVue + Canvas + Vite
+Vue 3 + TypeScript + Unocss + scss + PrimeVue + Canvas + Vite
