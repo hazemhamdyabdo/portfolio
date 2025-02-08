@@ -44,6 +44,7 @@ const configs = reactive(
       scalingObjects: true,
       autoPanOnResize: true,
       layoutHandler: new ForceLayout({
+        // noAutoRestartSimulation: true,
         positionFixedByClickWithAltKey: true,
         createSimulation: (d3, nodes, edges) => {
           const forceLink = d3
@@ -151,6 +152,18 @@ function walkExpandedNodes(nodes: TreeNodes, cb: (node: TreeNode) => void) {
       </template>
     </template>
   </v-network-graph>
+  <div
+    pos-absolute
+    text-coolgray
+    left-3
+    bottom-0
+    bg-gradient-from-zinc
+    p-2
+    rounded-lg
+    shadow-lg
+  >
+    Click icons to expand skills or drag to move, zoom with scroll.
+  </div>
 </template>
 
 <style>
