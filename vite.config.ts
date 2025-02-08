@@ -2,13 +2,14 @@ import { defineConfig } from "vite";
 import UnoCSS from "unocss/vite";
 import Unimport from "unimport/unplugin";
 import { fileURLToPath, URL } from "url";
+import svgLoader from 'vite-svg-loader'
 
 import vue from "@vitejs/plugin-vue";
 
-// https://vitejs.dev/config/
 export default defineConfig({
   plugins: [
     vue(),
+    svgLoader(),
     UnoCSS(),
     Unimport.vite({
       addons: {

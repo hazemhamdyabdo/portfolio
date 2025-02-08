@@ -19,6 +19,7 @@
     "nprogress": "^0.2.0",
     "unimport": "^3.7.1",
     "v-network-graph": "^0.9.18",
+    "vite-svg-loader": "^5.1.0",
     "vue": "^3.3.11",
     "vue-router": "^4.2.5",
     "vue-router-better-scroller": "^0.0.0"

@@ -9,6 +9,7 @@ import {
 
 import { TreeNodes, TreeNode } from "@/components/graph/data";
 import * as data from "@/components/graph/data";
+import jsImg from "@/assets/js-img.png";
 
 // Function to adjust node spacing
 function adjustNodeSpacing(layouts: vNG.NodePositions, scaleFactor: number) {
@@ -117,6 +118,23 @@ function walkExpandedNodes(nodes: TreeNodes, cb: (node: TreeNode) => void) {
     :event-handlers="eventHandlers"
     v-model:zoomLevel="zoomLevel"
   >
+    <template #override-node="{ nodeId, scale, config, ...slotProps }">
+      <circle
+        class="face-circle"
+        :r="config.radius * scale"
+        :fill="config.color"
+        v-bind="slotProps"
+      />
+      <image
+        class="face-picture"
+        :x="-config.radius * (scale * 0.5)"
+        :y="-config.radius * (scale * 0.5)"
+        :width="config.radius * scale * 1"
+        :height="config.radius * scale * 1"
+        :xlink:href="jsImg"
+        clip-path="url(#faceCircle)"
+      />
+    </template>
     <template #badge="{ scale }">
       <template v-for="(pos, node) in layouts.nodes" :key="node">
         <g
