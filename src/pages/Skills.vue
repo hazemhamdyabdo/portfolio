@@ -9,7 +9,6 @@ import {
 
 import { TreeNodes, TreeNode } from "@/components/graph/data";
 import * as data from "@/components/graph/data";
-import jsImg from "@/assets/js-img.png";
 
 // Function to adjust node spacing
 function adjustNodeSpacing(layouts: vNG.NodePositions, scaleFactor: number) {
@@ -34,7 +33,7 @@ const nodes = computed<TreeNodes>(() => {
 const edges = reactive(data.edges);
 const layouts = reactive<vNG.Layouts>(data.layouts);
 const layoutsBackup: vNG.NodePositions = {};
-const zoomLevel = ref(1.0);
+const zoomLevel = ref(1.3);
 
 const scaleFactor = 1; // Scale factor to increase node spacing
 adjustNodeSpacing(layouts.nodes, scaleFactor);
@@ -42,6 +41,7 @@ adjustNodeSpacing(layouts.nodes, scaleFactor);
 const configs = reactive(
   vNG.defineConfigs<TreeNode>({
     view: {
+      scalingObjects: true,
       layoutHandler: new ForceLayout({
         positionFixedByClickWithAltKey: true,
         createSimulation: (d3, nodes, edges) => {
@@ -52,15 +52,19 @@ const configs = reactive(
             .forceSimulation(nodes)
             .force("edge", forceLink.distance(100).strength(0.5))
             .force("charge", d3.forceManyBody().strength(-1000))
-            .force("center", d3.forceCenter().strength(0.05))
+            .force("center", d3.forceCenter().strength(1.8))
             .alphaMin(0.001);
         },
       }),
     },
+    edge: {
+      normal: { color: "#ccc", width: 1 },
+    },
     node: {
+      label: { direction: "south", color: "#fff" },
       normal: {
         radius: 40,
-        color: (n) => (n.children ? "#0000cc" : "#8888aa"),
+        color: (n) => (n.children ? "transparent" : "#0a1219"),
       },
     },
   })
@@ -131,7 +135,7 @@ function walkExpandedNodes(nodes: TreeNodes, cb: (node: TreeNode) => void) {
         :y="-config.radius * (scale * 0.5)"
         :width="config.radius * scale * 1"
         :height="config.radius * scale * 1"
-        :xlink:href="jsImg"
+        :xlink:href="nodes[nodeId]?.img"
         clip-path="url(#faceCircle)"
       />
     </template>
@@ -152,8 +156,12 @@ function walkExpandedNodes(nodes: TreeNodes, cb: (node: TreeNode) => void) {
 .graph {
   width: 100%;
   height: 90vh;
-  border: 1px solid #ccc;
 }
+.face-circle {
+  stroke: #ccc;
+  stroke-width: 0.5;
+}
+
 .collapse-badge {
   pointer-events: none;
 }
