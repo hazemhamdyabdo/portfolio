@@ -52,7 +52,7 @@ const configs = reactive(
             .forceSimulation(nodes)
             .force("edge", forceLink.distance(100).strength(0.5))
             .force("charge", d3.forceManyBody().strength(-1000))
-            .force("center", d3.forceCenter().strength(1.8))
+            .force("center", d3.forceCenter().strength(0.05))
             .alphaMin(0.001);
         },
       }),
@@ -161,7 +161,6 @@ function walkExpandedNodes(nodes: TreeNodes, cb: (node: TreeNode) => void) {
   stroke: #ccc;
   stroke-width: 0.5;
 }
-
 .collapse-badge {
   pointer-events: none;
 }
