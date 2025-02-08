@@ -42,6 +42,7 @@ const configs = reactive(
   vNG.defineConfigs<TreeNode>({
     view: {
       scalingObjects: true,
+      autoPanOnResize: true,
       layoutHandler: new ForceLayout({
         positionFixedByClickWithAltKey: true,
         createSimulation: (d3, nodes, edges) => {
@@ -50,7 +51,7 @@ const configs = reactive(
             .id((d: ForceNodeDatum) => d.id);
           return d3
             .forceSimulation(nodes)
-            .force("edge", forceLink.distance(100).strength(0.5))
+            .force("edge", forceLink.distance(100).strength(0.8))
             .force("charge", d3.forceManyBody().strength(-1000))
             .force("center", d3.forceCenter().strength(0.05))
             .alphaMin(0.001);
@@ -130,7 +131,7 @@ function walkExpandedNodes(nodes: TreeNodes, cb: (node: TreeNode) => void) {
         v-bind="slotProps"
       />
       <image
-        class="face-picture"
+        class="face-picture cursor-pointer"
         :x="-config.radius * (scale * 0.5)"
         :y="-config.radius * (scale * 0.5)"
         :width="config.radius * scale * 1"

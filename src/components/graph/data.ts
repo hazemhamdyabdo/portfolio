@@ -33,7 +33,7 @@ export const nodeTree: TreeNodes = {
     id: "groupA",
     name: "JavaScript",
     img: jsImg,
-    collapse: false,
+    collapse: true,
     children: {
       node1: {
         id: "groupA/node1",
@@ -78,7 +78,7 @@ export const nodeTree: TreeNodes = {
     id: "groupB",
     name: "Vue",
     img: vueImg,
-    collapse: false,
+    collapse: true,
     children: {
       node1: {
         id: "groupB/node1",
@@ -118,7 +118,7 @@ export const nodeTree: TreeNodes = {
   groupC: {
     id: "groupC",
     name: "CSS",
-    collapse: false,
+    collapse: true,
     img: cssImg,
     children: {
       node1: {
