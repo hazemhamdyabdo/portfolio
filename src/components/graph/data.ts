@@ -5,7 +5,7 @@ import tsImg from "@/assets/ts.png";
 import reactImg from "@/assets/react.png";
 import viteImg from "@/assets/vite.png";
 import vitestImg from "@/assets/vitest.png";
-import cypressImg from "@/assets/cypress.png";
+import cypressImg from "@/assets/cypressImg.png";
 import dockerImg from "@/assets/docker.png";
 import nuxtImg from "@/assets/nuxt.png";
 import pwaImg from "@/assets/pwa.png";
