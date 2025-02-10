@@ -91,6 +91,7 @@
 
 <script setup lang="ts">
 import {isDark} from "@/composables/toggle.ts";
+import {computed} from "vue";
 
 const strokeColor = computed(() =>
     isDark.value ? "rgb(255,255,255)" : "rgb(0,0,0)"

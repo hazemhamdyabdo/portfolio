@@ -1,15 +1,10 @@
 <script setup lang="ts">
-import {computed, reactive, ref, watchEffect} from "vue";
+import {computed, reactive, ref, watch} from "vue";
 import * as vNG from "v-network-graph";
-import {
-  ForceLayout,
-  ForceNodeDatum,
-  ForceEdgeDatum,
-} from "v-network-graph/lib/force-layout";
+import {ForceEdgeDatum, ForceLayout, ForceNodeDatum,} from "v-network-graph/lib/force-layout";
 
-import { TreeNodes, TreeNode } from "@/components/graph/data";
 import * as data from "@/components/graph/data";
-import {useColorMode} from "@vueuse/core";
+import {TreeNode, TreeNodes} from "@/components/graph/data";
 import {isDark} from "@/composables/toggle.ts";
 
 // Function to adjust node spacing
@@ -43,44 +38,46 @@ adjustNodeSpacing(layouts.nodes, scaleFactor);
 const labelColor = computed(() => (!isDark.value ? "#000" : "#fff"));
 
 const configs = reactive(
-  vNG.defineConfigs<TreeNode>({
-    view: {
-      scalingObjects: true,
-      autoPanOnResize: true,
-      layoutHandler: new ForceLayout({
-        // noAutoRestartSimulation: true,
-        positionFixedByClickWithAltKey: true,
-        createSimulation: (d3, nodes, edges) => {
-          const forceLink = d3
-            .forceLink<ForceNodeDatum, ForceEdgeDatum>(edges)
-            .id((d: ForceNodeDatum) => d.id);
-          return d3
-            .forceSimulation(nodes)
-            .force("edge", forceLink.distance(100).strength(0.8))
-            .force("charge", d3.forceManyBody().strength(-1000))
-            .force("center", d3.forceCenter().strength(0.05))
-            .alphaMin(0.001);
-        },
-      }),
-    },
-    edge: {
-      normal: { color: "#ccc", width: 1 },
-    },
-    node: {
-      label: { direction: "south", color: labelColor.value },
-      normal: {
-        radius: 40,
-        color: (n) => (n.children ? "transparent" : "#0a1219"),
+    vNG.defineConfigs<TreeNode>({
+      view: {
+        scalingObjects: true,
+        autoPanOnResize: true,
+        layoutHandler: new ForceLayout({
+          // noAutoRestartSimulation: true,
+          positionFixedByClickWithAltKey: true,
+          createSimulation: (d3, nodes, edges) => {
+            const forceLink = d3
+                .forceLink<ForceNodeDatum, ForceEdgeDatum>(edges)
+                .id((d: ForceNodeDatum) => d.id);
+            return d3
+                .forceSimulation(nodes)
+                .force("edge", forceLink.distance(100).strength(0.8))
+                .force("charge", d3.forceManyBody().strength(-1000))
+                .force("center", d3.forceCenter().strength(0.05))
+                .alphaMin(0.001);
+          },
+        }),
       },
-    },
-  })
+      edge: {
+        normal: {color: "#ccc", width: 1},
+      },
+      node: {
+        label: {direction: "south", color: labelColor.value},
+        normal: {
+          radius: 40,
+          color: (n) => (n.children ? "transparent" : "#0a1219"),
+        },
+      },
+    })
 );
 
 watch(labelColor, (newColor) => {
-  configs.node.label.color = newColor;
+  if (configs.node) {
+    configs.node?.label.color = newColor;
+  }
 });
 const eventHandlers: vNG.EventHandlers = {
-  "node:click": ({ node }) => {
+  "node:click": ({node}) => {
     const children = nodes.value[node]?.children;
     const parentPos = layouts.nodes[node];
     if (children && parentPos) {
@@ -108,7 +105,7 @@ const eventHandlers: vNG.EventHandlers = {
   },
 };
 
-const layers: vNG.Layers = { badge: "nodes" };
+const layers: vNG.Layers = {badge: "nodes"};
 
 function walkExpandedNodes(nodes: TreeNodes, cb: (node: TreeNode) => void) {
   for (const n of Object.values(nodes)) {
@@ -122,52 +119,52 @@ function walkExpandedNodes(nodes: TreeNodes, cb: (node: TreeNode) => void) {
 
 <template>
   <v-network-graph
-    class="graph"
-    :nodes="nodes"
-    :edges="edges"
-    :configs="configs"
-    :layers="layers"
-    :layouts="layouts"
-    :event-handlers="eventHandlers"
-    v-model:zoomLevel="zoomLevel"
+      class="graph"
+      :nodes="nodes"
+      :edges="edges"
+      :configs="configs"
+      :layers="layers"
+      :layouts="layouts"
+      :event-handlers="eventHandlers"
+      v-model:zoomLevel="zoomLevel"
   >
     <template #override-node="{ nodeId, scale, config, ...slotProps }">
       <circle
-        class="face-circle"
-        :r="config.radius * scale"
-        :fill="config.color"
-        v-bind="slotProps"
+          class="face-circle"
+          :r="config.radius * scale"
+          :fill="config.color"
+          v-bind="slotProps"
       />
       <image
-        class="face-picture cursor-pointer"
-        :x="-config.radius * (scale * 0.5)"
-        :y="-config.radius * (scale * 0.5)"
-        :width="config.radius * scale * 1"
-        :height="config.radius * scale * 1"
-        :xlink:href="nodes[nodeId]?.img"
-        clip-path="url(#faceCircle)"
+          class="face-picture cursor-pointer"
+          :x="-config.radius * (scale * 0.5)"
+          :y="-config.radius * (scale * 0.5)"
+          :width="config.radius * scale * 1"
+          :height="config.radius * scale * 1"
+          :xlink:href="nodes[nodeId]?.img"
+          clip-path="url(#faceCircle)"
       />
     </template>
     <template #badge="{ scale }">
       <template v-for="(pos, node) in layouts.nodes" :key="node">
         <g
-          v-if="nodes[node]?.children"
-          class="collapse-badge"
-          :transform="`translate(${pos.x + 9 * scale}, ${pos.y - 9 * scale})`"
+            v-if="nodes[node]?.children"
+            class="collapse-badge"
+            :transform="`translate(${pos.x + 9 * scale}, ${pos.y - 9 * scale})`"
         >
         </g>
       </template>
     </template>
   </v-network-graph>
   <div
-    pos-absolute
-    text-coolgray
-    left-3
-    bottom-0
-    bg-gradient-from-zinc
-    p-2
-    rounded-lg
-    shadow-lg
+      pos-absolute
+      text-coolgray
+      left-3
+      bottom-0
+      bg-gradient-from-zinc
+      p-2
+      rounded-lg
+      shadow-lg
   >
     Click icons to expand skills or drag to move, zoom with scroll.
   </div>
@@ -178,13 +175,16 @@ function walkExpandedNodes(nodes: TreeNodes, cb: (node: TreeNode) => void) {
   width: 100%;
   height: 90vh;
 }
+
 .face-circle {
   stroke: v-bind(labelColor);
   stroke-width: 0.1;
 }
+
 .collapse-badge {
   pointer-events: none;
 }
+
 .collapse-badge text {
   font-size: 14px;
   stroke: #fff;

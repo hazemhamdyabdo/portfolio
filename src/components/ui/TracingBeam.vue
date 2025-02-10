@@ -75,6 +75,7 @@
 import { cn } from "@/lib/utils";
 import { Motion } from "motion-v";
 import { useSpring } from "vue-use-spring";
+import {computed, onMounted, onUnmounted, ref, watch} from "vue";
 
 defineProps({
   class: String,
