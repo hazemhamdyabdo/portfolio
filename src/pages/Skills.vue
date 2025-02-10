@@ -9,22 +9,24 @@ import {isDark} from "@/composables/toggle.ts";
 
 import Typed from 'typed.js';
 
-const typedElement = ref(null);
-let typedInstance = null;
+const typedElement = ref<HTMLSpanElement | null>(null);
+let typedInstance: Typed | null = null;
 
 onMounted(() => {
-  typedInstance = new Typed(typedElement.value, {
-    strings: [
-      "Click icons to expand skills or drag to move, zoom with scroll.",
-    ],
-    typeSpeed: 50,
-    backSpeed: 20,
-    startDelay: 500,
-    backDelay: 1000,
-    loop: true,
-    showCursor: true,
-    cursorChar: "|",
-  });
+  if (typedElement.value) {
+    typedInstance = new Typed(typedElement.value, {
+      strings: [
+        "Click icons to expand skills or drag to move, zoom with scroll.",
+      ],
+      typeSpeed: 50,
+      backSpeed: 20,
+      startDelay: 500,
+      backDelay: 1000,
+      loop: true,
+      showCursor: true,
+      cursorChar: "|",
+    });
+  }
 });
 
 onBeforeUnmount(() => {
@@ -195,7 +197,7 @@ function walkExpandedNodes(nodes: TreeNodes, cb: (node: TreeNode) => void) {
       rounded-lg
       shadow-lg
   >
-    <span ref="typedElement" dark:text-white></span>  </div>
+    <span ref="typedElement" dark:text-white></span></div>
 </template>
 
 <style>
