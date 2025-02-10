@@ -1,5 +1,4 @@
 <template>
-  {{ isDark }}
   <div class="arrow left-arrow">
     <div id="left-one-anim">
       <svg
