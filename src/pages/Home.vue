@@ -39,9 +39,9 @@ import LinkPreview from "@/components/ui/LinkPreview.vue";
       individuals make transactions quickly and securely.
     </p>
 
-      <p>
+      <p font-base >
       Worked at
-        <a class="font-bold cursor-pointer" style="text-decoration: none" href="https://www.dorysoftware.com/">Dory</a>. Software solutions that are functional and intuitive, turn to Dory Software, and experience the difference we can make for you. Our team of professionals work closely with our clients every step of the way to ensure their needs are met and that they have products that are profitable, extendable, functional and simple.
+        <a class="font-bold cursor-pointer "  dark:text-white style="text-decoration: none" href="https://www.dorysoftware.com/">Dory</a>. Software solutions that are functional and intuitive, turn to Dory Software, and experience the difference we can make for you. Our team of professionals work closely with our clients every step of the way to ensure their needs are met and that they have products that are profitable, extendable, functional and simple.
       </p>
     <p font-base>
       Dreaming up ideas and making them come true is where my passion lies. You
