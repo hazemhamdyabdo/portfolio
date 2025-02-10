@@ -11,6 +11,7 @@
   "dependencies": {
     "@lottiefiles/vue-lottie-player": "^1.1.0",
     "@vueuse/core": "^10.11.1",
+    "d3-force": "^3.0.0",
     "eslint-plugin-unused-imports": "^3.0.0",
     "lottie-vuejs": "^0.1.9",
     "lottie-web": "^5.12.2",
@@ -18,6 +19,8 @@
     "motion-v": "^0.10.0-beta.1",
     "nprogress": "^0.2.0",
     "unimport": "^3.7.1",
+    "v-network-graph": "^0.9.18",
+    "vite-svg-loader": "^5.1.0",
     "vue": "^3.3.11",
     "vue-router": "^4.2.5",
     "vue-router-better-scroller": "^0.0.0"

@@ -14,6 +14,15 @@ import CountDown from "../components/CountDown.vue";
     <CountDown />
     <p font-base>
       Working at
+      <a href="https://wakeb.tech/" target="_blank" text-black dark:text-white
+        >Wakeb</a
+      >. Specialists in artificial intelligence, machine learning, cognitive
+      computing, intelligent applications and software as we were established
+      and keep up to be a leading company in the field of information technology
+      and we located in Riyadh, Saudi Arabia.
+    </p>
+    <p font-base>
+      Worked at
       <a href="https://hectar.io/" target="_blank" text-black dark:text-white
         >Hectar</a
       >. An integrated system for managing business operations and procedures
