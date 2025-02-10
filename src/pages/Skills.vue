@@ -73,7 +73,9 @@ const configs = reactive(
 
 watch(labelColor, (newColor) => {
   if (configs.node) {
-    configs.node?.label.color = newColor;
+    if (configs.node.label) {
+      configs.node.label.color = newColor;
+    }
   }
 });
 const eventHandlers: vNG.EventHandlers = {
