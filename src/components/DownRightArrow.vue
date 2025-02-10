@@ -63,7 +63,7 @@
                 stroke-linejoin="miter"
                 fill-opacity="0"
                 stroke-miterlimit="4"
-                stroke="rgb(255,255,255)"
+                :stroke="strokeColor"
                 stroke-opacity="1"
                 stroke-width="1"
                 d=" M-8,-0.5 C-8,-0.5 78,-0.5 78,-0.5 C86.28399658203125,-0.5 93,6.216000080108643 93,14.5 C93,14.5 93,95.5 93,95.5"
@@ -75,7 +75,7 @@
                 stroke-linejoin="miter"
                 fill-opacity="0"
                 stroke-miterlimit="4"
-                stroke="rgb(255,255,255)"
+                :stroke="strokeColor"
                 stroke-opacity="1"
                 stroke-width="1"
                 d=" M104,85.5 C104,85.5 93,95.5 93,95.5 C93,95.5 82,85.5 82,85.5"
@@ -89,7 +89,14 @@
   </div>
 </template>
 
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import {isDark} from "@/composables/toggle.ts";
+
+const strokeColor = computed(() =>
+    isDark.value ? "rgb(255,255,255)" : "rgb(0,0,0)"
+)
+
+</script>
 
 <style scoped>
 .arrow {

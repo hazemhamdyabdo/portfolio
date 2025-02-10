@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { computed, reactive, ref } from "vue";
+import {computed, reactive, ref, watchEffect} from "vue";
 import * as vNG from "v-network-graph";
 import {
   ForceLayout,
@@ -9,6 +9,8 @@ import {
 
 import { TreeNodes, TreeNode } from "@/components/graph/data";
 import * as data from "@/components/graph/data";
+import {useColorMode} from "@vueuse/core";
+import {isDark} from "@/composables/toggle.ts";
 
 // Function to adjust node spacing
 function adjustNodeSpacing(layouts: vNG.NodePositions, scaleFactor: number) {
@@ -38,6 +40,8 @@ const zoomLevel = ref(1.3);
 const scaleFactor = 1; // Scale factor to increase node spacing
 adjustNodeSpacing(layouts.nodes, scaleFactor);
 
+const labelColor = computed(() => (!isDark.value ? "#000" : "#fff"));
+
 const configs = reactive(
   vNG.defineConfigs<TreeNode>({
     view: {
@@ -63,7 +67,7 @@ const configs = reactive(
       normal: { color: "#ccc", width: 1 },
     },
     node: {
-      label: { direction: "south", color: "#fff" },
+      label: { direction: "south", color: labelColor.value },
       normal: {
         radius: 40,
         color: (n) => (n.children ? "transparent" : "#0a1219"),
@@ -72,6 +76,9 @@ const configs = reactive(
   })
 );
 
+watch(labelColor, (newColor) => {
+  configs.node.label.color = newColor;
+});
 const eventHandlers: vNG.EventHandlers = {
   "node:click": ({ node }) => {
     const children = nodes.value[node]?.children;
@@ -172,8 +179,8 @@ function walkExpandedNodes(nodes: TreeNodes, cb: (node: TreeNode) => void) {
   height: 90vh;
 }
 .face-circle {
-  stroke: #ccc;
-  stroke-width: 0.5;
+  stroke: v-bind(labelColor);
+  stroke-width: 0.1;
 }
 .collapse-badge {
   pointer-events: none;
