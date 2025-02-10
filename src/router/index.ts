@@ -28,11 +28,11 @@ const routes = [
     name: "skills",
     component: () => import("../pages/Skills.vue"),
   },
-  // {
-  //   path: "/demos",
-  //   name: "demos",
-  //   component: () => import("../pages/Demos.vue"),
-  // },
+  {
+    path: "/demos",
+    name: "demos",
+    component: () => import("../pages/Demos.vue"),
+  },
 ];
 
 export const Router = createRouter({
