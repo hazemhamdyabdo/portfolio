@@ -1,11 +1,37 @@
 <script setup lang="ts">
-import {computed, reactive, ref, watch} from "vue";
+import {computed, onBeforeUnmount, onMounted, reactive, ref, watch} from "vue";
 import * as vNG from "v-network-graph";
 import {ForceEdgeDatum, ForceLayout, ForceNodeDatum,} from "v-network-graph/lib/force-layout";
 
 import * as data from "@/components/graph/data";
 import {TreeNode, TreeNodes} from "@/components/graph/data";
 import {isDark} from "@/composables/toggle.ts";
+
+import Typed from 'typed.js';
+
+const typedElement = ref(null);
+let typedInstance = null;
+
+onMounted(() => {
+  typedInstance = new Typed(typedElement.value, {
+    strings: [
+      "Click icons to expand skills or drag to move, zoom with scroll.",
+    ],
+    typeSpeed: 50,
+    backSpeed: 20,
+    startDelay: 500,
+    backDelay: 1000,
+    loop: true,
+    showCursor: true,
+    cursorChar: "|",
+  });
+});
+
+onBeforeUnmount(() => {
+  if (typedInstance) {
+    typedInstance.destroy();
+  }
+});
 
 // Function to adjust node spacing
 function adjustNodeSpacing(layouts: vNG.NodePositions, scaleFactor: number) {
@@ -120,6 +146,7 @@ function walkExpandedNodes(nodes: TreeNodes, cb: (node: TreeNode) => void) {
 </script>
 
 <template>
+
   <v-network-graph
       class="graph"
       :nodes="nodes"
@@ -162,14 +189,13 @@ function walkExpandedNodes(nodes: TreeNodes, cb: (node: TreeNode) => void) {
       pos-absolute
       text-coolgray
       left-3
-      bottom-0
+      top-32
       bg-gradient-from-zinc
       p-2
       rounded-lg
       shadow-lg
   >
-    Click icons to expand skills or drag to move, zoom with scroll.
-  </div>
+    <span ref="typedElement" dark:text-white></span>  </div>
 </template>
 
 <style>

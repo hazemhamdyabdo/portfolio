@@ -19,6 +19,7 @@
     "motion-v": "^0.10.0-beta.1",
     "nprogress": "^0.2.0",
     "qss": "^3.0.0",
+    "typed.js": "^2.1.0",
     "unimport": "^3.7.1",
     "v-network-graph": "^0.9.18",
     "vite-svg-loader": "^5.1.0",
