@@ -54,7 +54,7 @@ onUnmounted(() => {
         <EmailsIcon />
       </a>
       <a
-        href="https://wa.me/+201120922588"
+        href="https://wa.me/201120922588?text=Hi%20Hazem%2C%20I%20came%20from%20your%20portfolio%20site%20and%20would%20like%20to%20chat%20about%20a%20opportunity."
         title="let's chat"
         text-xl
         cursor-pointer
