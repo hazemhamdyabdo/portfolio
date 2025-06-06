@@ -40,7 +40,7 @@ onUnmounted(() => {
       <RouterLink :to="{ name: 'projects' }">Projects</RouterLink>
       <!-- <RouterLink :to="{ name: 'demos' }">Demos</RouterLink> -->
       <a
-        href="https://drive.google.com/file/d/1uW1JPc54JU0XTjHnBGj6JxK9k8nqB93e/view"
+        href="https://drive.google.com/file/d/16hDj5vxjSnPq7f2VTz2r1pnY8DbMM2RO/view?usp=sharing"
         target="_blank"
         >Resume</a
       >
@@ -119,7 +119,7 @@ onUnmounted(() => {
       <RouterLink :to="{ name: 'projects' }">Projects</RouterLink>
       <!-- <RouterLink :to="{ name: 'demos' }">Demos</RouterLink> -->
       <a
-        href="https://drive.google.com/file/d/1uW1JPc54JU0XTjHnBGj6JxK9k8nqB93e/view"
+        href="https://drive.google.com/file/d/16hDj5vxjSnPq7f2VTz2r1pnY8DbMM2RO/view?usp=sharing"
         target="_blank"
         >Resume</a
       >
