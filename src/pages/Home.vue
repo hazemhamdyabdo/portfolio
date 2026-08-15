@@ -13,6 +13,7 @@ import { profile } from "@/content/profile";
       uppercase
       op60
       font-600
+      dark:text-white
     >
       {{ profile.title }} · {{ profile.location }}
     </p>
@@ -47,7 +48,9 @@ import { profile } from "@/content/profile";
         Hectar
       </LinkPreview>
       (component systems, Vitest, GitHub Actions CI/CD),
-      <LinkPreview class="font-bold" url="https://payiano.com/">Payiano</LinkPreview>
+      <LinkPreview class="font-bold" url="https://payiano.com/"
+        >Payiano</LinkPreview
+      >
       (Vue 2→3 and Webpack→Vite migrations for a payments platform), and
       <a
         class="font-bold cursor-pointer"
