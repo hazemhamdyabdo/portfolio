@@ -1,14 +1,14 @@
 <script setup lang="ts">
-import { PreBlogs } from "@/utils/index.ts";
+import { blogs2025 } from "@/utils/index.ts";
 import BlogYear from "@/components/BlogYear.vue";
 </script>
 
 <template>
-  <section mb-24 class="slide-enter">
-    <div relative>
-      <BlogYear :year="2023" />
+  <section>
+    <div class="container" relative>
+      <BlogYear :year="2025" />
       <ul font-base space-y-2xl text-xl>
-        <li v-for="blog in PreBlogs" :key="blog.title">
+        <li v-for="blog in blogs2025" :key="blog.title">
           <ul class="details">
             <li>
               <RouterLink
@@ -45,7 +45,6 @@ a {
 
 .details {
   display: flex;
-  align-items: center;
   gap: 1.8rem;
   & li:not(:first-child) {
     list-style-type: disc;
@@ -58,8 +57,9 @@ a {
     color: rgb(95, 95, 95);
   }
 }
+
 @media (max-width: 460px) {
-  .slide-enter {
+  .container {
     padding-left: 1rem;
 
     & a {

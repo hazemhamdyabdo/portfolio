@@ -11,6 +11,7 @@ import EmailsIcon from "./icons/EmailsIcon.vue";
 import WhatsAppIcon from "./icons/WhatsAppIcon.vue";
 import HamburgerMenue from "./icons/HamburgerMenue.vue";
 import MenuClose from "./icons/MenuClose.vue";
+import { profile } from "@/content/profile";
 
 const isMenueOpen = ref(false);
 const onScroll = () => {
@@ -38,15 +39,16 @@ onUnmounted(() => {
       <RouterLink :to="{ name: 'skills' }">Skills</RouterLink>
       <RouterLink :to="{ name: 'blogs' }">Blog</RouterLink>
       <RouterLink :to="{ name: 'projects' }">Projects</RouterLink>
-      <!-- <RouterLink :to="{ name: 'demos' }">Demos</RouterLink> -->
+      <RouterLink :to="{ name: 'experience' }">Experience</RouterLink>
       <a
-        href="https://drive.google.com/file/d/16hDj5vxjSnPq7f2VTz2r1pnY8DbMM2RO/view?usp=sharing"
+        :href="profile.links.resume"
         target="_blank"
+        rel="noopener noreferrer"
         >Resume</a
       >
 
       <a
-        href="mailto:hazemhamdy117@gmail.com"
+        :href="`mailto:${profile.email}`"
         title="mail me"
         text-xl
         cursor-pointer
@@ -54,27 +56,30 @@ onUnmounted(() => {
         <EmailsIcon />
       </a>
       <a
-        href="https://wa.me/201120922588?text=Hi%20Hazem%2C%20I%20came%20from%20your%20portfolio%20site%20and%20would%20like%20to%20chat%20about%20a%20opportunity."
+        :href="profile.links.whatsapp"
         title="let's chat"
         text-xl
         cursor-pointer
         target="_blank"
+        rel="noopener noreferrer"
       >
         <WhatsAppIcon />
       </a>
       <a
-        href="https://github.com/hazemhamdyabdo"
+        :href="profile.links.github"
         title="Github"
         target="_blank"
+        rel="noopener noreferrer"
       >
         <GithubIcon text-xl cursor-pointer />
       </a>
 
       <a
-        href="https://www.linkedin.com/in/hazemhamdyabdo/"
+        :href="profile.links.linkedin"
         text-xl
         cursor-pointer
         target="_blank"
+        rel="noopener noreferrer"
         title="LinkedIn"
       >
         <LinkedinIcon />
@@ -117,15 +122,16 @@ onUnmounted(() => {
       <RouterLink :to="{ name: 'skills' }">Skills</RouterLink>
       <RouterLink :to="{ name: 'blogs' }">Blog</RouterLink>
       <RouterLink :to="{ name: 'projects' }">Projects</RouterLink>
-      <!-- <RouterLink :to="{ name: 'demos' }">Demos</RouterLink> -->
+      <RouterLink :to="{ name: 'experience' }">Experience</RouterLink>
       <a
-        href="https://drive.google.com/file/d/16hDj5vxjSnPq7f2VTz2r1pnY8DbMM2RO/view?usp=sharing"
+        :href="profile.links.resume"
         target="_blank"
+        rel="noopener noreferrer"
         >Resume</a
       >
 
       <a
-        href="mailto:hazemhamdy117@gmail.com"
+        :href="`mailto:${profile.email}`"
         title="mail me"
         text-xl
         cursor-pointer
@@ -133,27 +139,30 @@ onUnmounted(() => {
         <EmailsIcon />
       </a>
       <a
-        href="https://wa.me/+201120922588"
+        :href="profile.links.whatsapp"
         title="let's chat"
         text-xl
         cursor-pointer
         target="_blank"
+        rel="noopener noreferrer"
       >
         <WhatsAppIcon />
       </a>
       <a
-        href="https://github.com/hazemhamdyabdo"
+        :href="profile.links.github"
         title="Github"
         target="_blank"
+        rel="noopener noreferrer"
       >
         <GithubIcon text-xl cursor-pointer />
       </a>
 
       <a
-        href="https://www.linkedin.com/in/hazemhamdyabdo/"
+        :href="profile.links.linkedin"
         text-xl
         cursor-pointer
         target="_blank"
+        rel="noopener noreferrer"
         title="LinkedIn"
       >
         <LinkedinIcon />

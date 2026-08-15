@@ -7,11 +7,14 @@ import DownRightArrow from "@/components/DownRightArrow.vue";
 import Hectar from "@/companies/Hectar.vue";
 import Dream from "@/companies/Dream.vue";
 import Grapvine from "@/companies/Grapvine.vue";
+import Wakeb from "@/companies/Wakeb.vue";
 </script>
 
 <template>
   <section class="sec slide-enter">
     <div>
+      <Wakeb />
+      <DownLeftArrow />
       <Grapvine />
       <DownLeftArrow />
     </div>
@@ -24,7 +27,6 @@ import Grapvine from "@/companies/Grapvine.vue";
       <DownLeftArrow />
       <Sable />
       <DownRightArrow />
-      <!-- <DownLeftArrow /> -->
     </div>
     <Dory />
   </section>

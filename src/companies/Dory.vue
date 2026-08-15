@@ -16,30 +16,37 @@
           n-link-text
           font-700
           target="_blank"
+          rel="noopener noreferrer"
           >@DorySoftware</a
         >
+        <span op60 text-sm font-500 ml-2>Jan 2022 – May 2022</span>
       </h2>
       <p>
-        Serving the needs of business owners around the world, Dory Software
-        focuses on offering our clients real-world solutions to all of their
-        software needs and we offer custom applications and processes to meet
-        your goals.
+        Custom software studio delivering practical business apps. I shipped
+        e-commerce, booking, and real-estate experiences with shared UI kits and
+        charting.
       </p>
       <div font-base space-y-2>
         <h3 text-white font-700>My Responsibilities</h3>
         <ul list-circle space-y-3>
           <li>
-            Worked on various of small projects like e-commerce, real estate
-            management systems and booking web applications.
+            Developed web applications including e-commerce, booking systems,
+            and real estate platforms.
           </li>
           <li>
-            Devised and maintained various types of critical reusable components
-            like data tables, wizards, utils..etc to accelerate the development
-            delivery.
+            Built reusable UI components such as data tables, form wizards, and
+            shared utilities to accelerate delivery.
           </li>
           <li>
-            Worked closely with UX and UI teams ensuring seamless
-            implementations.
+            Implemented data visualization using Highcharts, AmCharts, and
+            Chart.js.
+          </li>
+          <li>
+            Conducted code reviews and supported junior developers.
+          </li>
+          <li>
+            Worked closely with design teams to deliver consistent,
+            user-friendly interfaces.
           </li>
         </ul>
       </div>

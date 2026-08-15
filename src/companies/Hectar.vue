@@ -12,49 +12,35 @@
     
     <div flex="~ col" gap-2 pt-5 class="content">
       <h3 dark:text-white font-600>
-        <a href="https://hectarplus.io/" dark:n-link-text target="_blank">
+        <a href="https://hectarplus.io/" dark:n-link-text target="_blank" rel="noopener noreferrer">
           @Hectar
         </a>
+        <span op60 text-sm font-500 ml-2>Mar 2024 – Oct 2024</span>
       </h3>
       <p font-base>
-        At Hectar, We play a crucial role in creating an engaging and
-        user-friendly interface for real estate entities to manage their
-        business operations and procedures effectively.
+        At Hectar, I helped ship an integrated real-estate operations and
+        property management platform—focusing on reusable UI systems, testing,
+        CI/CD, and performance.
       </p>
       <div>
         <h4 third-head mb-4>My Responsibilities</h4>
         <ul font-base list-circle space-y-2>
           <li>
-            Ensuring that the frontend components work consistently across
-            different web browsers and devices.
+            Built reusable component systems to improve development speed and
+            maintainability.
           </li>
           <li>
-            Optimizing frontend code and assets to improve page load times and
-            overall system performance.
+            Implemented unit testing for components and utilities using Vitest.
           </li>
           <li>
-            Implementing accessibility best practices to ensure that the system
-            is usable by people with disabilities.
+            Managed and improved CI/CD pipelines using GitHub Actions.
           </li>
           <li>
-            Collaborating with backend developers to integrate frontend
-            components with backend systems and APIs.
+            Conducted code reviews and supported junior developers.
           </li>
           <li>
-            Using version control systems like Git to manage code changes and
-            collaborate with other developers effectively.
-          </li>
-          <li>
-            Integrating third-party services and APIs into the system to enhance
-            its capabilities and interoperability.
-          </li>
-          <li>
-            Conducting frontend testing, including unit tests and end-to-end
-            tests, to identify and fix any issues or bugs.
-          </li>
-          <li>
-            Documenting frontend code and components to facilitate maintenance
-            and future development.
+            Optimized application performance through improved architecture and
+            frontend best practices.
           </li>
         </ul>
       </div>

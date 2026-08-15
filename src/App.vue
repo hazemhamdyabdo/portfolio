@@ -3,7 +3,7 @@
     <TheNavbar />
   </nav>
   <snow-effect color="gray" flakes="100" speed="1" />
-  <main flex="~ justify-center items-center">
+  <main class="w-full" flex="~ justify-center items-center">
     <RouterView v-slot="{ Component }" :key="$route.fullPath">
       <Transition name="fade" mode="out-in">
         <component :is="Component"></component>

@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import Blog2025 from "@/pages/posts/2025/Blog.vue";
 import Blog from "@/pages/posts/2024/Blog.vue";
 import PreBlog from "@/pages/posts/2023/Blog.vue";
 </script>
@@ -7,6 +8,7 @@ import PreBlog from "@/pages/posts/2023/Blog.vue";
   <section space-y-8xl>
     <h2 dark:text-white text-4xl font-400 mt-8 text-black>Blogs</h2>
     <div flex="~ col" gap-40 class="slide-enter">
+      <Blog2025 />
       <Blog />
       <PreBlog />
     </div>

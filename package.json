@@ -13,6 +13,7 @@
     "@vueuse/core": "^10.11.1",
     "d3-force": "^3.0.0",
     "eslint-plugin-unused-imports": "^3.0.0",
+    "gsap": "^3.15.0",
     "lottie-vuejs": "^0.1.9",
     "lottie-web": "^5.12.2",
     "markdown-it": "^14.0.0",

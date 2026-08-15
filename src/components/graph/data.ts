@@ -1,4 +1,4 @@
-import * as vNG from "v-network-graph"
+import * as vNG from "v-network-graph";
 import jsImg from "@/assets/js-img.png";
 import vueImg from "@/assets/vue-img.png";
 import tsImg from "@/assets/ts.png";
@@ -17,16 +17,22 @@ import piniaImg from "@/assets/pinia.png";
 import primeVue from "@/assets/primevue.png";
 import unoCss from "@/assets/unocss.png";
 import jestImg from "@/assets/jest.png";
-
+import graphqlImg from "@/assets/graphql.png";
+import nextImg from "@/assets/nextjs.svg?url";
+import reduxImg from "@/assets/redux.svg?url";
+import zustandImg from "@/assets/zustand.svg?url";
+import reactQueryImg from "@/assets/react-query.svg?url";
+import reactRouterImg from "@/assets/react-router.svg?url";
+import shadcnImg from "@/assets/shadcn.svg?url";
 
 export interface TreeNode extends vNG.Node {
-  id: string
-  name: string
-  collapse?: boolean
-  children?: Record<string, TreeNode>
+  id: string;
+  name: string;
+  collapse?: boolean;
+  children?: Record<string, TreeNode>;
 }
 
-export type TreeNodes = Record<string, TreeNode>
+export type TreeNodes = Record<string, TreeNode>;
 
 export const nodeTree: TreeNodes = {
   groupA: {
@@ -44,7 +50,6 @@ export const nodeTree: TreeNodes = {
         id: "groupA/node2",
         name: "Vite",
         img: viteImg,
-
       },
       node3: {
         id: "groupA/node3",
@@ -58,20 +63,19 @@ export const nodeTree: TreeNodes = {
       },
       node5: {
         id: "groupA/node5",
-        name: "React",
-        img: reactImg,
-      },
-      node6: {
-        id: "groupA/node6",
         name: "Jest",
         img: jestImg,
       },
-      node7: {
-        id: "groupA/node7",
+      node6: {
+        id: "groupA/node6",
         name: "Cypress",
         img: cypressImg,
       },
-
+      node7: {
+        id: "groupA/node7",
+        name: "GraphQL",
+        img: graphqlImg,
+      },
     },
   },
   groupB: {
@@ -84,15 +88,12 @@ export const nodeTree: TreeNodes = {
         id: "groupB/node1",
         name: "Nuxt",
         img: nuxtImg,
-
       },
       node2: {
         id: "groupB/node2",
         name: "Vitest",
         img: vitestImg,
-
       },
-
       node3: {
         id: "groupB/node3",
         name: "Vuetify",
@@ -133,18 +134,52 @@ export const nodeTree: TreeNodes = {
       },
     },
   },
-  // groupD: {
-  //   id: "groupD",
-  //   name: "React",
-  //   img: reactImg,
-  //   collapse: false,
-  // }
-}
+  groupD: {
+    id: "groupD",
+    name: "React",
+    img: reactImg,
+    collapse: true,
+    children: {
+      node1: {
+        id: "groupD/node1",
+        name: "Next.js",
+        img: nextImg,
+      },
+      node2: {
+        id: "groupD/node2",
+        name: "Redux",
+        img: reduxImg,
+      },
+      node3: {
+        id: "groupD/node3",
+        name: "Zustand",
+        img: zustandImg,
+      },
+      node4: {
+        id: "groupD/node4",
+        name: "TanStack Query",
+        img: reactQueryImg,
+      },
+      node5: {
+        id: "groupD/node5",
+        name: "React Router",
+        img: reactRouterImg,
+      },
+      node6: {
+        id: "groupD/node6",
+        name: "Shadcn",
+        img: shadcnImg,
+      },
+    },
+  },
+};
 
 export const edges: vNG.Edges = {
   edge1: { source: "groupA", target: "groupB" },
   edge2: { source: "groupB", target: "groupC" },
   edge3: { source: "groupC", target: "groupA" },
+  edge4: { source: "groupA", target: "groupD" },
+  edge5: { source: "groupD", target: "groupB" },
   // Group A
   edgeA_1: { source: "groupA", target: "groupA/node1" },
   edgeA_2: { source: "groupA", target: "groupA/node2" },
@@ -163,28 +198,20 @@ export const edges: vNG.Edges = {
   // Group C
   edgeC_1: { source: "groupC", target: "groupC/node1" },
   edgeC_2: { source: "groupC", target: "groupC/node2" },
-  edgeC_3: { source: "groupC", target: "groupC/node3" },
-  // Group D
-  // edgeD_1: { source: "groupD", target: "groupD/node1" },
-  // edgeD_2: { source: "groupD", target: "groupD/node2" },
-  // edgeD_3: { source: "groupD", target: "groupD/node3" },
-}
+  // Group D — React
+  edgeD_1: { source: "groupD", target: "groupD/node1" },
+  edgeD_2: { source: "groupD", target: "groupD/node2" },
+  edgeD_3: { source: "groupD", target: "groupD/node3" },
+  edgeD_4: { source: "groupD", target: "groupD/node4" },
+  edgeD_5: { source: "groupD", target: "groupD/node5" },
+  edgeD_6: { source: "groupD", target: "groupD/node6" },
+};
 
 export const layouts: vNG.Layouts = {
   nodes: {
-    "groupA": { x: 0.0, y: -60.0 },
-    // "groupA/node1": { x: -86.8, y: -115.5 },
-    // "groupA/node2": { x: 0.8, y: -163.7 },
-    // "groupA/node3": { x: 87.2, y: -113.3 },
-    "groupB": { x: -53.0, y: 32.0 },
-    // "groupB/node1": { x: -143.1, y: -15.2 },
-    // "groupB/node2": { x: -140.5, y: 84.7 },
-    // "groupB/node3": { x: -53.4, y: 133.8 },
-    // "groupB/node4": { x: -33.0, y: 84.0 },
-    // "groupB/node5": { x: 33.0, y: 32.0 },
-    "groupC": { x: 53.0, y: 32.0 },
-    // "groupC/node1": { x: 140.7, y: -22.1 },
-    // "groupC/node2": { x: 144.3, y: 77.8 },
-    // "groupC/node3": { x: 50.3, y: 132.2 },
+    groupA: { x: 0.0, y: -70.0 },
+    groupB: { x: -70.0, y: 40.0 },
+    groupC: { x: 70.0, y: 40.0 },
+    groupD: { x: 0.0, y: 100.0 },
   },
-}
+};

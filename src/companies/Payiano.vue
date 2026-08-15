@@ -11,40 +11,38 @@
 
     <div font-base flex="~ col" gap-3 pt-5 class="main">
       <h2 dark:text-white font-600>
-        <a href="https://payiano.com/" dark:n-link-text target="_blank">
+        <a href="https://payiano.com/" dark:n-link-text target="_blank" rel="noopener noreferrer">
           @Payiano
         </a>
+        <span op60 text-sm font-500 ml-2>May 2022 – Mar 2024</span>
       </h2>
       <p font-base>
-        At Payiano, we provide all the necessary tools to create websites and
-        applications that enable payment acceptance and payout distribution. Our
-        products cater to a wide range of businesses, from online and in-person
-        retailers to subscription-based companies, software platforms, and
-        marketplaces.
+        Digital payments platform for merchants, corporates, and individuals.
+        I owned modern Vue/Nuxt/TypeScript delivery and led major frontend
+        modernization work.
       </p>
       <div>
         <h4 third-head>My Responsibilities</h4>
         <ul font-base list-circle space-y-2>
           <li>
-            Developed and managed web applications using VueJS, Pinia, Vuetify,
-            and TypeScript to ensure improved code quality and long-term
-            maintainability.
+            Developed modern web applications using Vue.js, Nuxt.js, Tailwind
+            CSS, and TypeScript.
           </li>
           <li>
-            Migrated the front-end code base front Webpack to VITE, helping the
-            productivity of developers by reducing development server start time
-            by 20% and production by 8%.
+            Integrated multiple RESTful APIs to deliver scalable payment and
+            merchant workflows.
           </li>
           <li>
-            Refactor and restructured Pinia store, optimizing application’s
-            state management; reduced load time by 25% and enhanced overall
-            performance
+            Collaborated with UX/UI teams to keep implementations feasible and
+            polished.
           </li>
           <li>
-            Optimized system eﬀiciency by integrating API endpoints using Proxy
-            Server and leveraging caching methodologies, leading to a 40%
-            decrease in API calls and a notable improvement in system
-            performance.
+            Led frontend migrations: Vue 2 → Vue 3, and Webpack → Vite for faster
+            builds and better developer experience.
+          </li>
+          <li>
+            Refactored Pinia state management and caching strategies—improving
+            load time and cutting unnecessary API traffic.
           </li>
         </ul>
       </div>

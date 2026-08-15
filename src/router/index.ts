@@ -29,9 +29,13 @@ const routes = [
     component: () => import("../pages/Skills.vue"),
   },
   {
-    path: "/demos",
-    name: "demos",
+    path: "/experience",
+    name: "experience",
     component: () => import("../pages/Demos.vue"),
+  },
+  {
+    path: "/demos",
+    redirect: { name: "experience" },
   },
 ];
 
